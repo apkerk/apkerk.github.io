@@ -196,6 +196,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .dstep:focus-visib
 .paper-head { display: flex; gap: 18px; align-items: flex-start; justify-content: space-between; padding: 22px 0; cursor: pointer; }
 .paper-head.nolink { cursor: default; }
 .paper .t { font: 600 20px/1.32 var(--font-body); color: var(--ink); }
+.paper .st { font: 600 italic 17px/1.35 var(--font-display); color: var(--ink); margin-top: 3px; }
 .paper .a { font-size: 15px; color: var(--ink-soft); margin-top: 6px; }
 .paper .meta { display: flex; align-items: center; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
 .expand-ico { flex: none; width: 30px; height: 30px; border: 1px solid var(--rule); border-radius: 50%; display: grid; place-items: center; color: var(--ink-soft); transition: transform .2s, background .2s, color .2s; }
