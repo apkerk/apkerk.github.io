@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=9">
+<link rel="stylesheet" href="/assets/css/site.css?v=10">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -93,17 +93,21 @@
         <p class="hook">Women get approval, men get amplification.</p>
         <div class="prose">
           <p>My job market paper asks why women's channels on YouTube receive fewer views than men's. I follow a random sample of 9,232 U.S. channels and more than six million audience comments to trace where the gap comes from.</p>
-          <p>The raw gap is large: women's channels receive about 33% fewer views, and about 22% fewer after the usual controls. Audiences treat women's channels well. Their comments are more positive and less profane, and their viewers are more engaged. But once you account for the positivity and profanity of the comments a channel receives, the view gap collapses to essentially zero.</p>
-          <p>The mechanism is the platform's amplification machinery. Human resharing and an engagement-optimizing recommender system reward high-arousal signals, so positive comment tone predicts fewer views while profanity predicts more. The warm reception women's channels earn is exactly the signal the system declines to amplify.</p>
+          <p>The raw gap is large: women's channels receive about 33% fewer views, and about 22% fewer after the usual controls. The audience measures do not show weaker engagement with women's channels. Their comments are more positive and less profane, and their viewers are more engaged. Once I account for comment positivity and profanity, the view gap falls to essentially zero.</p>
+          <p>The mechanism is platform diffusion. Human resharing and an engagement-optimizing recommender system reward high-arousal signals, so positive comment tone predicts fewer views while profanity predicts more. Comment positivity and profanity account for the view gap because the diffusion process rewards profanity more than positive tone.</p>
         </div>
-        <div class="spot-cta">
+        <div class="spot-cta" style="margin-top:24px">
           <a class="btn btn-solid" href="/research/youtube-gender-gap/">Read the deep-dive</a>
         </div>
       </div>
       <div class="statpair">
         <div class="bigstat"><div class="n"><span data-count="33" data-suffix="%">33%</span></div><div class="d">fewer views for women's channels</div></div>
         <div class="bigstat resolved"><div class="n">0%</div><div class="d">the gap that remains once you account for the positivity and profanity of the comments each channel receives</div></div>
-        <div class="bigstat"><div class="n" style="font-family:var(--font-mono);font-size:clamp(22px,3vw,32px)">9,232 · 82K+ · 6M+</div><div class="d">channels · videos · audience comments analyzed</div></div>
+        <div class="bigstat">
+          <div class="rowstat"><span class="rn">9,232</span><span class="rl">channels</span></div>
+          <div class="rowstat"><span class="rn">82,000+</span><span class="rl">videos</span></div>
+          <div class="rowstat"><span class="rn">6M+</span><span class="rl">audience comments analyzed</span></div>
+        </div>
       </div>
     </div>
   </div>
