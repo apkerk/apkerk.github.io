@@ -156,7 +156,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .dstep:focus-visib
 .bigstat.resolved .n { color: var(--green); }
 .bigstat .d { font-size: 17px; color: var(--ink-soft); margin-top: 6px; }
 .bigstat .rowstat { display: flex; align-items: baseline; gap: 10px; }
-.bigstat .rowstat + .rowstat { margin-top: 8px; }
+.bigstat .rowstat + .rowstat { margin-top: 16px; }
 .bigstat .rn { font: 600 clamp(22px,2.6vw,30px)/1 var(--font-mono); color: var(--lava); white-space: nowrap; }
 .bigstat .rl { font-size: 17px; color: var(--ink-soft); }
 
