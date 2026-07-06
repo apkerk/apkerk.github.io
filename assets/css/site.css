@@ -78,6 +78,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .dstep:focus-visib
 .band-warm { background: var(--bg-2); }
 .kicker { font: 600 15px/1 var(--font-mono); letter-spacing: .18em; text-transform: uppercase; color: var(--pink); margin-bottom: 18px; display: inline-block; }
 .section-h { font-size: clamp(30px, 4vw, 46px); margin-bottom: 14px; }
+/* colored section headings + pink band (Katie 2026-07-06) */
+.hc-pink { color: var(--pink); }
+.hc-lava { color: var(--lava); }
+.hc-green { color: var(--green); }
+.band-pink { background: var(--pink-wash); }
 .section-lede { font-size: clamp(17px, 1.6vw, 20px); max-width: var(--prose); color: var(--ink-soft); }
 
 /* ---------- top stripe + nav ---------- */
@@ -186,7 +191,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .dstep:focus-visib
 
 /* ---------- paper portfolio ---------- */
 .statusgroup + .statusgroup { margin-top: 40px; }
-.group-h { font: 600 19px/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--lava); margin-bottom: 6px; padding-bottom: 12px; border-bottom: 2px solid var(--lava); }
+.group-h { font: 600 19px/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); margin-bottom: 6px; padding-bottom: 12px; border-bottom: 2px solid var(--rule); }
 .paper { border-bottom: 1px solid var(--rule); }
 .paper-head { display: flex; gap: 18px; align-items: flex-start; justify-content: space-between; padding: 22px 0; cursor: pointer; }
 .paper-head.nolink { cursor: default; }

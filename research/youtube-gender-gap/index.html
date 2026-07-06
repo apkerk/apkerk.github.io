@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=13">
+<link rel="stylesheet" href="/assets/css/site.css?v=14">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,7 +36,7 @@
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
     <div class="nav-links">
       <a href="/">Home</a>
-      <a href="/research/youtube-gender-gap/">Job market paper</a>
+      <a href="/research/youtube-gender-gap/">Job Market Paper</a>
       <a href="/#research">Research</a>
       <a href="/teaching/">Teaching</a>
       <a href="/#about">About</a>
@@ -46,12 +46,12 @@
   </div>
 </nav>
 
-<div class="wrap"><div class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#research">Research</a> &nbsp;/&nbsp; Job market paper</div></div>
+<div class="wrap"><div class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#research">Research</a> &nbsp;/&nbsp; Job Market Paper</div></div>
 
 <!-- ===================== HERO + PLAIN BAND ===================== -->
 <header class="band tight dd-hero">
   <div class="wrap">
-    <span class="kicker reveal in">Job market paper · draft available on request</span>
+    <span class="kicker reveal in">Job Market Paper · draft available on request</span>
     <h1 class="reveal in">Approval Without <span class="amp">Amplification</span></h1>
     <p class="section-lede reveal in" style="margin-top:14px">Gender and visibility on algorithmically mediated platforms &nbsp;·&nbsp; Katie Apker, Cornell ILR</p>
 
@@ -88,7 +88,7 @@
 <!-- ===================== WHAT EXPLAINS THE GAP ===================== -->
 <section class="band" id="explain">
   <div class="wrap">
-    <h2 class="section-h reveal">How much does each factor explain?</h2>
+    <h2 class="section-h reveal hc-lava">How Much Does Each Factor Explain?</h2>
     <p class="section-lede reveal" style="margin-bottom:30px">The gap starts at 33%. Add one explanation at a time and watch how much is left. Almost all of it turns out to be the negativity and profanity of the comments.</p>
 
     <div class="reveal" id="decomp-interactive"></div>
@@ -109,7 +109,7 @@
 <!-- ===================== WHAT DOES NOT EXPLAIN IT ===================== -->
 <section class="band band-warm" id="notit">
   <div class="wrap">
-    <h2 class="section-h reveal">Eight explanations I tested and ruled out</h2>
+    <h2 class="section-h reveal hc-green">Eight Explanations I Tested and Ruled Out</h2>
     <p class="section-lede reveal" style="margin-bottom:26px">The obvious answers were the first ones I checked. Open any one to see the test and the result.</p>
     <div class="ruleouts reveal">
       <details class="ro"><summary style="list-style:none"><div class="rotag">Topic</div><div class="roq">Do women just pick lower-traffic topics?</div><div class="rov">No, within the same categories, women still get about 20% fewer views.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Comparing only within the same 40 content categories removes just ~11% of the gap. Nearly 9 in 10 of it is within-category.</div></details>
@@ -128,7 +128,7 @@
 <!-- ===================== MECHANISM (dark) ===================== -->
 <section class="band mech" id="mechanism">
   <div class="wrap">
-    <h2 class="section-h reveal">Amplification rewards high-arousal signals</h2>
+    <h2 class="section-h reveal hc-pink">Amplification Rewards High-Arousal Signals</h2>
     <p class="section-lede reveal" style="color:var(--night-ink)">Both human resharing and an inferred engagement-optimizing recommender system reward high-arousal signals. In the models, positive comment tone is associated with fewer views (about -0.43), while profanity is associated with more views (about +0.20). Because women's channels receive more positive and less profane comments, softer treatment becomes lower visibility.</p>
     <div class="two reveal">
       <div class="lane">
@@ -151,7 +151,7 @@
 <!-- ===================== GROUNDED IN THE LITERATURE ===================== -->
 <section class="band" id="grounded">
   <div class="wrap">
-    <h2 class="section-h reveal">What this builds on</h2>
+    <h2 class="section-h reveal hc-green">What This Builds On</h2>
     <p class="section-lede reveal" style="margin-bottom:24px">The finding rests on three established literatures: how attention spreads online, how ranking systems amplify without any gendered intent, and how favorable-seeming treatment can still be biased.</p>
     <div class="cites reveal">
       <div class="cite-group">
@@ -195,22 +195,11 @@
 <!-- ===================== THE TALK ===================== -->
 <section class="band" id="talk">
   <div class="wrap">
-    <h2 class="section-h reveal">Talk overview</h2>
-    <p class="section-lede reveal" style="margin-bottom:26px">A short version of the job market paper argument. Use the arrows, dots, or arrow keys.</p>
-
-    <div class="reveal" id="talk-interactive"></div>
-
-    <!-- static, readable fallback -->
-    <div id="talk-static" class="reveal lede-prose">
-      <p><strong>The setting.</strong> YouTube creators build businesses through audience attention. On platforms, audience reception and visibility are linked by recommendation systems rather than by a single evaluator who also allocates resources.</p>
-      <p><strong>The question.</strong> Gender-and-entrepreneurship research often explains women's disadvantage through unfavorable evaluation. I ask whether that account holds when platform amplification sits between evaluation and allocation.</p>
-      <p><strong>The evidence.</strong> I study a random sample of 9,232 U.S. YouTube creators, more than 6 million audience comments, creator information, YouTube Data API metrics, and text and image measures of content.</p>
-      <p><strong>The findings.</strong> Women's channels get about 33% fewer views, and about 22% fewer views after the usual controls. They receive more positive and less profane comments, higher engagement, and no statistically significant controlled subscriber gap.</p>
-      <p><strong>The mechanism.</strong> Positive comment tone is associated with fewer views, while profanity is associated with more views. Human resharing and an inferred engagement-optimizing recommender system convert softer treatment into lower visibility.</p>
-      <p><strong>The contribution.</strong> This is a boundary condition on favorable-evaluation accounts of entrepreneurial inequality: more favorable treatment can coexist with lower visibility.</p>
+    <h2 class="section-h reveal hc-lava">Talk Overview</h2>
+    <div class="lede-prose reveal" style="margin-bottom:6px">
+      <p>A short version of the job market paper argument: on YouTube, audience reception and visibility are linked by recommendation systems rather than by a single evaluator who also allocates resources. Gender-and-entrepreneurship research often explains women's disadvantage through unfavorable evaluation; I ask whether that account holds when platform amplification sits between evaluation and allocation. Studying a random sample of 9,232 U.S. creators and more than 6 million audience comments, I find that women's channels receive about 22% fewer views after controls even though audiences treat them more favorably. Warmer reception is associated with less amplification and high-arousal engagement with more, so favorable treatment can coexist with lower visibility.</p>
     </div>
-    <p class="reveal" style="font-size:13px;color:var(--ink-faint);margin-top:16px">Adapted from my M&amp;O Research Camp talk.</p>
-    <div style="margin-top:38px" class="reveal">
+    <div style="margin-top:30px" class="reveal">
       <h3 style="font-size:24px;margin-bottom:6px">As presented: the research camp slides</h3>
       <p style="font-size:15px;color:var(--ink-soft);margin-bottom:16px">The actual deck from my Cornell M&amp;O Research Camp talk (May 2026). Click a slide or use the buttons to advance.</p>
       <div class="campdeck" id="campdeck">
@@ -255,7 +244,7 @@
 <!-- ===================== THE PAPER ===================== -->
 <section class="band band-warm" id="paper">
   <div class="wrap">
-    <h2 class="section-h reveal">Read it in full</h2>
+    <h2 class="section-h reveal hc-pink">Read It in Full</h2>
 
     <div class="lede-prose reveal" style="max-width:none">
       <p>The full manuscript is available on request. The headline findings: women's channels receive about 22% fewer views than comparable men's after controls, yet earn higher engagement and have no statistically significant controlled subscriber gap; topics, titles, transcripts, thumbnails, and other creator-controlled surfaces do not explain the gap; women receive more positive and less profane comments while men receive more high-arousal comments; and once audience comment treatment enters the model, the remaining gap is not distinguishable from zero. I call the mechanism a negative arousal bonus: human resharing and an inferred engagement-optimizing recommender system amplify high-arousal engagement into visibility more powerfully than positive reception. When algorithmic intermediaries stand between evaluation and allocation, positive reception can lose its protective force.</p>
