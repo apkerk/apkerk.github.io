@@ -123,8 +123,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .dstep:focus-visib
 .portrait::before { content:""; position:absolute; left:-18px; top:-18px; width:52px; height:52px; background:var(--green); border-radius:50%; z-index:-1; }
 
 /* the 15-second version */
-.snapshot p { font-size: clamp(19px, 2.1vw, 26px); font-family: var(--font-display); color: var(--ink); line-height: 1.4; max-width: calc(30ch + 10ch); }
-.snapshot .prose { max-width: 60ch; margin-top: 18px; }
+.snapshot p { font-size: clamp(19px, 2.1vw, 26px); font-family: var(--font-display); color: var(--ink); line-height: 1.4; max-width: none; }
+.snapshot .prose { max-width: none; margin-top: 18px; }
 .snapshot .prose p, .snapshot .prose li { font-family: var(--font-body); font-size: 17px; line-height: 1.65; color: var(--ink-soft); }
 .snapshot .prose p { margin-bottom: 16px; max-width: none; }
 .snapshot .prose ul { padding-left: 22px; margin: 0 0 16px; }
