@@ -89,7 +89,7 @@ window.SITE = {
       status: "Editing for submission",
       themes: ["gender-as-lens"],
       href: null,
-      twoLine: "Whether corporate social responsibility ratings push boards toward adding women, or mainly reward firms that already have women directors." },
+      twoLine: "Whether corporate social responsibility ratings push all boards, or just some boards, toward adding more women." },
 
     { id: "gov-mandates", featured: "card", group: "Editing for submission", statusClass: "editing",
       title: "Government Mandates, Manager Compliance, and a Partisan Filter in Enforcement",
