@@ -12,9 +12,22 @@ python3 -m http.server 8080
 
 Then open http://localhost:8080/ . (Any static server works; absolute `/assets/...` paths require serving from this directory as the web root.)
 
-## Deploy
+## Deploy (LIVE since 2026-07-06)
 
-Drop this folder on any static host. Vercel: import the repo, framework preset "Other", output directory = repo root, no build command. Point katieapker.com DNS at the host (keep Wix live until cutover, then switch).
+Live at **https://katieapker.com** via GitHub Pages, repo `apkerk/apkerk.github.io` (public), branch `main`, root. This folder is canonical; the repo is a deploy copy.
+
+To ship updates:
+
+```
+STAGE=$(mktemp -d) && git clone --depth 1 https://github.com/apkerk/apkerk.github.io "$STAGE" \
+  && rsync -a --delete --exclude .git --exclude CNAME ./ "$STAGE/" \
+  && cd "$STAGE" && touch .nojekyll && git add -A \
+  && git commit -m "Deploy from canonical site/" && git push
+```
+
+(Keep `CNAME` (contains `katieapker.com`) and `.nojekyll` in the repo — deleting CNAME drops the custom domain.)
+
+DNS: Cloudflare account manages katieapker.com (Bluehost = registrar only). Apex A records → GitHub Pages IPs (185.199.108–111.153, DNS only/gray cloud), `www` CNAME → apkerk.github.io. MX/TXT rows are email; `pat*` Tunnel rows are the Pat dashboard. Never touch either.
 
 ## Structure
 
