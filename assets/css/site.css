@@ -306,7 +306,7 @@ details.paper[open] .expand-ico { transform: rotate(45deg); background: var(--in
 .venn-wrap { overflow-x: auto; margin-top: 26px; }
 .venn { display: block; width: 100%; min-width: 700px; height: auto; }
 .venn .vt { font: 600 19px var(--font-mono); letter-spacing: .14em; text-transform: uppercase; }
-.venn .vp { font: 500 15px var(--font-body); fill: var(--ink); }
+.venn .vp { font: 600 18px var(--font-display); font-style: italic; fill: var(--ink); }
 .venn .vp-sub { font: 600 11px var(--font-mono); letter-spacing: .1em; text-transform: uppercase; fill: var(--ink-soft); }
 .venn .vjmp { font: 600 27px var(--font-display); font-style: italic; fill: var(--ink); }
 .venn a:hover .vp, .venn a:hover .vjmp { fill: var(--lava); }
