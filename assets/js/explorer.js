@@ -157,4 +157,43 @@
 
     if (tStatic) tStatic.setAttribute("hidden", "");
   }
+
+  /* ---------------- research camp slide click-through ---------------- */
+  var cd = document.getElementById("campdeck");
+  if (cd) {
+    var cImgs = Array.prototype.slice.call(cd.querySelectorAll("img"));
+    if (cImgs.length > 1) {
+      cd.classList.add("is-viewer");
+      var controls = document.createElement("div");
+      controls.className = "campdeck-controls";
+      controls.innerHTML =
+        '<button class="btn btn-line btn-sm" id="cprev">&larr; Back</button>' +
+        '<button class="btn btn-ink btn-sm" id="cnext">Next &rarr;</button>' +
+        '<span class="campdeck-count" id="ccount"></span>';
+      cd.parentNode.insertBefore(controls, cd.nextSibling);
+      var ci = 0;
+      var ccount = document.getElementById("ccount");
+      function cshow(i) {
+        ci = Math.min(Math.max(i, 0), cImgs.length - 1);
+        cImgs.forEach(function (im, j) {
+          if (j === ci) { im.classList.add("on"); im.removeAttribute("loading"); }
+          else { im.classList.remove("on"); }
+        });
+        ccount.textContent = "Slide " + (ci + 1) + " of " + cImgs.length;
+      }
+      document.getElementById("cprev").addEventListener("click", function () { cshow(ci - 1); });
+      document.getElementById("cnext").addEventListener("click", function () { cshow(ci + 1); });
+      cImgs.forEach(function (im) { im.addEventListener("click", function () { cshow(ci + 1); }); });
+      // swipe
+      var cx0 = null;
+      cd.addEventListener("touchstart", function (e) { cx0 = e.touches[0].clientX; }, { passive: true });
+      cd.addEventListener("touchend", function (e) {
+        if (cx0 === null) return;
+        var dx = e.changedTouches[0].clientX - cx0;
+        if (Math.abs(dx) > 40) cshow(ci + (dx < 0 ? 1 : -1));
+        cx0 = null;
+      });
+      cshow(0);
+    }
+  }
 })();

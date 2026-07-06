@@ -289,6 +289,14 @@ details.paper[open] .expand-ico { transform: rotate(45deg); background: var(--in
 .decomp-readout .big { font-family:var(--font-display); font-size: clamp(20px,2.4vw,28px); color:var(--ink); line-height:1.3; margin:8px 0; }
 .decomp-controls { display:flex; gap:10px; align-items:center; margin: 18px 0 4px; flex-wrap:wrap; }
 
+/* research camp slide click-through */
+.campdeck img { width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; box-shadow: var(--shadow); }
+.campdeck img + img { margin-top: 16px; }
+.campdeck.is-viewer img { display: none; margin-top: 0; cursor: pointer; }
+.campdeck.is-viewer img.on { display: block; }
+.campdeck-controls { display: flex; gap: 10px; align-items: center; margin-top: 14px; flex-wrap: wrap; }
+.campdeck-count { font: 600 13px/1 var(--font-mono); letter-spacing: .06em; color: var(--ink-soft); }
+
 /* what does NOT explain it */
 .ruleouts { display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap:12px; }
 .ro { text-align:left; background: var(--card); border:1px solid var(--rule); border-radius:10px; padding:18px; cursor:pointer; transition:.15s; }
