@@ -28,10 +28,6 @@
 
     dHost.innerHTML =
       '<div class="decomp">' +
-        '<div class="decomp-top">' +
-          '<div><div class="kicker" style="color:var(--lava)">How much of the gap does each thing explain?</div>' +
-          '<div style="font-size:15px;color:var(--ink-soft);max-width:54ch">The gap starts at 33%. Add one explanation at a time and watch how much is left. Almost all of it turns out to be the comments.</div></div>' +
-        '</div>' +
         '<div class="bar-track"><div class="bar-fill" id="dbar"><span class="pct" id="dpct"></span></div></div>' +
         '<div class="bar-cap">How big the view gap still is</div>' +
         '<div class="decomp-steps">' + stepsHtml + '</div>' +
