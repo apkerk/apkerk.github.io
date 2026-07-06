@@ -57,8 +57,7 @@
         '<div class="explains" style="color:' + (s.punch ? "var(--green)" : "var(--lava)") + '">' +
           (i === 0 ? "Starting point" : "After accounting for " + s.factor) + '</div>' +
         '<div class="big">' + s.explains + '</div>' +
-        '<div style="font-size:15px;color:var(--ink-soft)">' + s.sub + '</div>' +
-        (s.sig === false ? '<div style="font-size:13px;color:var(--ink-faint);margin-top:8px;font-style:italic">Not statistically distinguishable from zero. This is non-significance, not a reversal.</div>' : "");
+        '<div style="font-size:15px;color:var(--ink-soft)">' + s.sub + '</div>';
     }
     function go(i) {
       if (i < 0 || i >= steps.length) return;

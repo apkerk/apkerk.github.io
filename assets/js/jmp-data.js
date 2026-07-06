@@ -38,10 +38,10 @@ window.JMP = {
       residual: 19, label: "19%", sig: true,
       explains: "How women title and frame their own videos barely moves the gap either.",
       sub: "So it is not what women are making or how they present it." },
-    { key: "The comments they get", factor: "how warm and how profane the comments are",
+    { key: "The comments they get", factor: "how negative and how profane the comments are",
       residual: 2, label: "≈ 0", sig: false, punch: true,
-      explains: "The comments explain almost all of what is left. Account for how warm and how profane each channel's comments are, and the gap is no longer distinguishable from zero.",
-      sub: "Women get warmer, less profane comments. Resharing and the recommendation system reward heat, so warmer treatment becomes fewer views. About 90% of the remaining gap runs through this difference." },
+      explains: "The comments explain almost all of what is left. Account for how negative and how profane each channel's comments are, and the gap is no longer distinguishable from zero.",
+      sub: "Women get more positive, less profane comments. Resharing and the algorithmic recommendation system reward psychological arousal and negativity, so warmer, softer treatment contributes to fewer views. About 90% of the remaining gap runs through this difference." },
   ],
 
   /* ---- what does NOT explain it (the eight rule-outs, plain) ---- */
