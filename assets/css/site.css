@@ -216,7 +216,7 @@ details.paper[open] .expand-ico { transform: rotate(45deg); background: var(--in
 .footer { padding-block: 44px; border-top: 1px solid var(--rule); }
 .footer-in { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
 .footer .mark { display:inline-flex; align-items:center; gap:12px; font:600 17px/1 var(--font-display); color:var(--ink); }
-.footer .mark img { height:30px; width:30px; }
+.footer .mark img { height:46px; width:46px; }
 .dots { display:flex; gap:7px; }
 .dots i { width:9px; height:9px; border-radius:50%; }
 .dots i:nth-child(1){background:var(--lava);} .dots i:nth-child(2){background:var(--pink);}
@@ -224,7 +224,9 @@ details.paper[open] .expand-ico { transform: rotate(45deg); background: var(--in
 .footer .c { font-size:13px; color:var(--ink-faint); }
 
 /* crest watermark */
-.wm { position:absolute; right:-40px; top:30px; width:300px; opacity:.05; pointer-events:none; z-index:0; }
+.wm { position:absolute; right:10px; top:30px; width:360px; opacity:.11; pointer-events:none; z-index:0; }
+.kicker-brand { display:inline-flex; align-items:center; gap:10px; }
+.kicker-crest { height:38px; width:38px; }
 .band > .wrap { position: relative; z-index: 1; }
 
 /* ---------- motion utilities ---------- */
