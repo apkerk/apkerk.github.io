@@ -186,7 +186,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .dstep:focus-visib
 
 /* ---------- paper portfolio ---------- */
 .statusgroup + .statusgroup { margin-top: 40px; }
-.group-h { font: 600 13px/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; padding-bottom: 12px; border-bottom: 2px solid var(--rule); }
+.group-h { font: 600 19px/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--lava); margin-bottom: 6px; padding-bottom: 12px; border-bottom: 2px solid var(--lava); }
 .paper { border-bottom: 1px solid var(--rule); }
 .paper-head { display: flex; gap: 18px; align-items: flex-start; justify-content: space-between; padding: 22px 0; cursor: pointer; }
 .paper-head.nolink { cursor: default; }
