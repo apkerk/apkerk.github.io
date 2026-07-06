@@ -23,7 +23,7 @@ window.SITE = {
     cv: "/assets/cv.pdf",
     positioning: "I study digital entrepreneurship, creators, and content creation on platforms like YouTube, with gender as the empirical lens.",
     snapshot:
-      "I study digital entrepreneurship: how creators build businesses on platforms like YouTube, and how those platforms shape who becomes visible and economically successful. My research brings sociology of entrepreneurship, economic sociology, and advanced quantitative methods to markets that are easy to enter but hard to measure. I build large original datasets to show how gender shapes visibility, evaluation, and opportunity in platform-based work.",
+      "I study digital entrepreneurship: how creators build businesses on platforms like YouTube, and how those platforms shape who becomes visible and economically successful. My research brings sociology of entrepreneurship, economic sociology, and econometric methods, including difference-in-differences, to markets that are easy to enter but hard to measure. I build large original datasets to show how gender shapes visibility, evaluation, and opportunity in platform-based work.",
   },
 
   /* ---- curiosity themes (dual entry, parallel to papers) ---- */
@@ -102,7 +102,7 @@ window.SITE = {
     { id: "tolbert-diversity", featured: "card", group: "Data collection / analysis", statusClass: "field",
       title: "Increasing Diversity and Organizational Outcomes: Past and Present",
       authors: "Tolbert, P., & Apker, K.",
-      status: "Data collection complete · analysis in progress",
+      status: "Analysis in process",
       themes: ["gender-as-lens"],
       href: null,
       twoLine: "How the link between workforce diversity and organizational outcomes has changed across decades." },
