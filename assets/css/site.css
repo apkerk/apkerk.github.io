@@ -76,7 +76,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .dstep:focus-visib
 .band { padding-block: clamp(48px, 7vw, 104px); border-top: 1px solid var(--rule); position: relative; }
 .band.tight { padding-block: clamp(36px, 5vw, 64px); }
 .band-warm { background: var(--bg-2); }
-.kicker { font: 600 12px/1 var(--font-mono); letter-spacing: .18em; text-transform: uppercase; color: var(--pink); margin-bottom: 18px; display: inline-block; }
+.kicker { font: 600 15px/1 var(--font-mono); letter-spacing: .18em; text-transform: uppercase; color: var(--pink); margin-bottom: 18px; display: inline-block; }
 .section-h { font-size: clamp(30px, 4vw, 46px); margin-bottom: 14px; }
 .section-lede { font-size: clamp(17px, 1.6vw, 20px); max-width: var(--prose); color: var(--ink-soft); }
 
@@ -154,7 +154,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .dstep:focus-visib
 .bigstat.resolved { border-left-color: var(--green); }
 .bigstat .n { font: 600 clamp(40px,5vw,60px)/1 var(--font-display); color: var(--lava); letter-spacing:-.01em; }
 .bigstat.resolved .n { color: var(--green); }
-.bigstat .d { font-size: 14px; color: var(--ink-soft); margin-top: 6px; }
+.bigstat .d { font-size: 17px; color: var(--ink-soft); margin-top: 6px; }
 
 /* homepage mini decomposition bar */
 #home-decomp { display: block; margin: 6px 0 22px; }

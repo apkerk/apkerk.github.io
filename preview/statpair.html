@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preview · JMP stat section variants</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css?v=6">
+<style>
+  .pv-note { font: 600 13px/1.4 var(--font-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--marigold); margin: 60px 0 8px; }
+  .pv-note:first-of-type { margin-top: 20px; }
+  .pv-desc { font-size: 15px; color: var(--ink-soft); margin-bottom: 20px; max-width: 640px; }
+  .statwrap { max-width: 560px; }
+
+  /* Variant B: label-first, description leads in bold ink */
+  .v2 .bigstat .d { font-size: 19px; color: var(--ink); font-weight: 600; margin: 0 0 8px; }
+  .v2 .bigstat .sub { font-size: 15px; color: var(--ink-soft); margin-top: 6px; font-weight: 400; }
+  .v2 .bigstat .n { font-size: clamp(34px,4vw,48px); }
+
+  /* Variant C: bigger cards, key phrase bolded, tightened copy */
+  .v3 .bigstat { padding: 28px 30px; }
+  .v3 .bigstat .d { font-size: 19px; line-height: 1.45; margin-top: 10px; }
+  .v3 .bigstat .d b { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="stripe"><i></i><i></i><i></i><i></i></div>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="wordmark" href="/">Katie Apker<span class="dot">.</span></a>
+    <div class="nav-links"><a href="/">Home</a></div>
+  </div>
+</nav>
+
+<section class="band band-warm">
+  <div class="wrap">
+    <span class="kicker">Preview · not linked from the site</span>
+    <h2 class="section-h">JMP stat section: three versions</h2>
+    <p class="section-lede">Same numbers, three treatments. Version A is what is live right now. Tell Pat which one to ship, or mix pieces (for example, A's layout with C's bolding).</p>
+
+    <p class="pv-note">Version A — live now: bigger description text (17px, up from 14px)</p>
+    <p class="pv-desc">The current card layout with the description text bumped up. Number stays dominant.</p>
+    <div class="statwrap">
+      <div class="statpair">
+        <div class="bigstat"><div class="n">33%</div><div class="d">fewer views for women's channels</div></div>
+        <div class="bigstat resolved"><div class="n">0%</div><div class="d">the gap that remains once you account for the positivity and profanity of the comments each channel receives</div></div>
+        <div class="bigstat"><div class="n" style="font-family:var(--font-mono);font-size:clamp(22px,3vw,32px)">9,232 · 82K+ · 6M+</div><div class="d">channels · videos · audience comments analyzed</div></div>
+      </div>
+    </div>
+
+    <p class="pv-note">Version B — label leads, number supports</p>
+    <p class="pv-desc">The claim comes first in bold navy (19px), the number sits under it slightly smaller. Reads more like a sentence, less like a dashboard.</p>
+    <div class="statwrap v2">
+      <div class="statpair">
+        <div class="bigstat"><div class="d">Fewer views for women's channels</div><div class="n">33%</div></div>
+        <div class="bigstat resolved"><div class="d">The gap that remains once you account for comment positivity and profanity</div><div class="n">0%</div><div class="sub">statistically indistinguishable from zero</div></div>
+        <div class="bigstat"><div class="d">Channels, videos, and audience comments analyzed</div><div class="n" style="font-family:var(--font-mono);font-size:clamp(22px,3vw,30px)">9,232 · 82K+ · 6M+</div></div>
+      </div>
+    </div>
+
+    <p class="pv-note">Version C — bigger cards, key phrases bolded (19px)</p>
+    <p class="pv-desc">Number stays dominant like Version A, but the description is larger with the load-bearing phrase bolded in navy, and the copy is tightened.</p>
+    <div class="statwrap v3">
+      <div class="statpair">
+        <div class="bigstat"><div class="n">33%</div><div class="d"><b>fewer views</b> for women's channels</div></div>
+        <div class="bigstat resolved"><div class="n">0%</div><div class="d"><b>the gap that remains</b> after accounting for the positivity and profanity of each channel's comments</div></div>
+        <div class="bigstat"><div class="n" style="font-family:var(--font-mono);font-size:clamp(22px,3vw,32px)">9,232 · 82K+ · 6M+</div><div class="d"><b>channels · videos · comments</b> analyzed</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
