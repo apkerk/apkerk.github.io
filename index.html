@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=14">
+<link rel="stylesheet" href="/assets/css/site.css?v=15">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -238,40 +238,37 @@
       </details>
     </div>
 
-    <!-- how it connects -->
+    <!-- how it connects: venn -->
     <div class="connect reveal">
-      <span class="kicker">How it connects</span>
       <h3 style="font-size:26px;margin-top:6px">One research agenda, three threads</h3>
-      <div class="connect-grid">
-        <div class="connect-col">
-          <div class="accent" style="background:var(--lava)"></div>
-          <h4>AI &amp; the future of work</h4>
-          <ul>
-            <li>Approval Without Amplification</li>
-            <li>Longitudinal Creator Panel</li>
-            <li>Mapping the Creator Economy</li>
-          </ul>
-        </div>
-        <div class="connect-col">
-          <div class="accent" style="background:var(--pink)"></div>
-          <h4>Gender as a lens</h4>
-          <ul>
-            <li>Approval Without Amplification</li>
-            <li>Putting the &ldquo;I&rdquo; in Entrepreneurial Identity</li>
-            <li>Board Gender Diversity</li>
-            <li>Separate Spheres <span style="color:var(--ink-faint)">(under review)</span></li>
-          </ul>
-        </div>
-        <div class="connect-col">
-          <div class="accent" style="background:var(--green)"></div>
-          <h4>The creator economy</h4>
-          <ul>
-            <li>Approval Without Amplification</li>
-            <li>Mapping the Creator Economy</li>
-            <li>Longitudinal Creator Panel</li>
-          </ul>
-        </div>
+      <div class="venn-wrap">
+        <svg class="venn" viewBox="0 0 1000 800" role="img" aria-label="Venn diagram of three research threads: AI and the future of work, gender as a lens, and the creator economy. The job market paper, Approval Without Amplification, sits at the center of all three. The Longitudinal Creator Panel and Mapping the Creator Economy sit where AI meets the creator economy. Putting the I in Entrepreneurial Identity, Board Gender Diversity, and Separate Spheres sit in the gender thread.">
+          <g style="mix-blend-mode:multiply">
+            <circle cx="385" cy="320" r="235" fill="#E63100" fill-opacity=".12" stroke="#E63100" stroke-width="2.5"></circle>
+            <circle cx="615" cy="320" r="235" fill="#E6007E" fill-opacity=".12" stroke="#E6007E" stroke-width="2.5"></circle>
+            <circle cx="500" cy="515" r="235" fill="#3A6248" fill-opacity=".12" stroke="#3A6248" stroke-width="2.5"></circle>
+          </g>
+          <text class="vt" x="300" y="52" text-anchor="middle" fill="#E63100">AI &amp; the future of work</text>
+          <text class="vt" x="700" y="52" text-anchor="middle" fill="#E6007E">Gender as a lens</text>
+          <text class="vt" x="500" y="788" text-anchor="middle" fill="#3A6248">The creator economy</text>
+
+          <a href="/research/youtube-gender-gap/">
+            <text class="vjmp" x="500" y="362" text-anchor="middle">Approval Without<tspan x="500" dy="30">Amplification</tspan></text>
+            <text class="vp-sub" x="500" y="424" text-anchor="middle">Job market paper</text>
+          </a>
+
+          <text class="vp" x="400" y="470" text-anchor="middle">Longitudinal Creator Panel</text>
+          <text class="vp" x="408" y="498" text-anchor="middle">Mapping the Creator Economy</text>
+
+          <a href="/research/founder-identity/">
+            <text class="vp" x="745" y="230" text-anchor="middle">Putting the &#8220;I&#8221; in<tspan x="745" dy="21">Entrepreneurial Identity</tspan></text>
+          </a>
+          <text class="vp" x="745" y="298" text-anchor="middle">Board Gender Diversity</text>
+          <text class="vp" x="742" y="332" text-anchor="middle">Separate Spheres</text>
+          <text class="vp-sub" x="742" y="352" text-anchor="middle">Under review</text>
+        </svg>
       </div>
+      <p style="font-size:14px;color:var(--ink-soft);margin-top:12px">Each paper sits where its questions overlap. The job market paper sits at the center of all three threads.</p>
     </div>
   </div>
 </section>
