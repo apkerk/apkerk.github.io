@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Approval Without Amplification · Katie Apker</title>
+<meta name="description" content="Katie Apker's job market paper on gender and entrepreneurial visibility on YouTube. Women's channels receive more positive and less profane comments, but get fewer views.">
+<link rel="canonical" href="https://katieapker.com/research/youtube-gender-gap/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Approval Without Amplification · Katie Apker">
+<meta property="og:description" content="Women's channels receive more positive and less profane comments, but get fewer views. Katie Apker's job market paper on YouTube creators.">
+<meta property="og:url" content="https://katieapker.com/research/youtube-gender-gap/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Approval Without Amplification: Gender and Entrepreneurial Visibility on Algorithmically Mediated Platforms",
+  "author": { "@type": "Person", "name": "Katie Apker", "affiliation": "Cornell University, ILR School" },
+  "about": ["Gender", "Digital platforms", "Algorithmic recommendation", "Creator economy", "Entrepreneurship"],
+  "isPartOf": { "@type": "WebSite", "name": "Katie Apker", "url": "https://katieapker.com/" },
+  "url": "https://katieapker.com/research/youtube-gender-gap/"
+}
+</script>
+</head>
+<body>
+<div class="stripe"><i></i><i></i><i></i><i></i></div>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="wordmark" href="/">Katie Apker<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <div class="nav-links">
+      <a href="/#themes">Explore</a>
+      <a href="/#research">Research</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a class="nav-cv" href="/assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap"><div class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/#research">Research</a> &nbsp;/&nbsp; Job market paper</div></div>
+
+<!-- ===================== HERO + PLAIN BAND ===================== -->
+<header class="band tight dd-hero">
+  <div class="wrap">
+    <span class="kicker reveal in">Job market paper · draft available on request</span>
+    <h1 class="reveal in">Approval Without <span class="amp">Amplification</span></h1>
+    <p class="section-lede reveal in" style="margin-top:14px">Gender and visibility on algorithmically mediated platforms &nbsp;·&nbsp; Katie Apker, Cornell ILR</p>
+
+    <div class="plainband reveal in">
+      <div class="lbl">The finding in 30 seconds</div>
+      <p>In a random sample of 9,232 U.S. YouTube creators and more than 6 million comments, women's channels get about 33% fewer views. About a third of the raw gap is explained by production differences. The remaining gap is not explained by topics, titles, transcripts, or thumbnails. Women's channels receive more positive and less profane comments, and those softer signals are less rewarded by human resharing and an inferred engagement-optimizing recommender system.</p>
+      <p class="sub">Same finding, in one line: <strong style="color:#fff">women get approval, men get amplification.</strong></p>
+    </div>
+
+    <div class="statpair reveal" style="grid-template-columns:repeat(3,1fr);margin-top:24px">
+      <div class="bigstat"><div class="n"><span data-count="33" data-suffix="%">33%</span></div><div class="d">fewer views for women's channels</div></div>
+      <div class="bigstat resolved"><div class="n">&#8776; 0</div><div class="d">the gap that remains once you account for the tone and heat of the comments each channel receives</div></div>
+      <div class="bigstat"><div class="n" style="font-family:var(--font-mono);font-size:clamp(22px,3vw,32px)">9,232 · 82K+ · 6M+</div><div class="d">channels · videos · audience comments analyzed</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== JUMP NAV ===================== -->
+<div class="jump">
+  <div class="wrap jump-in">
+    <a href="#explain">What explains it</a>
+    <a href="#notit">What does not</a>
+    <a href="#mechanism">The mechanism</a>
+    <a href="#grounded">The literature</a>
+    <a href="#talk">The talk</a>
+    <a href="#paper">The paper</a>
+  </div>
+</div>
+
+<!-- ===================== WHAT EXPLAINS THE GAP ===================== -->
+<section class="band" id="explain">
+  <div class="wrap">
+    <span class="kicker reveal">What explains the gap</span>
+    <h2 class="section-h reveal">How much does each thing explain?</h2>
+    <p class="section-lede reveal" style="margin-bottom:30px">Start at the raw gap. Add each explanation in turn. The pattern shows which differences explain the remaining gap and which do not.</p>
+
+    <div class="reveal" id="decomp-interactive"></div>
+
+    <!-- static, always-readable fallback (hidden when the interactive version loads) -->
+    <div id="decomp-static" class="reveal">
+      <ol style="max-width:70ch;line-height:1.6">
+        <li><strong>Raw gap (~33% fewer views).</strong> Women's channels get about a third fewer views, before accounting for anything.</li>
+        <li><strong>Channel basics &rarr; ~22%.</strong> Comparing channels of similar age, output, and quality removes about a third of the gap. Video output is the biggest single piece. A real 22% gap remains.</li>
+        <li><strong>Content category &rarr; ~20%.</strong> Comparing within the same content categories removes only about a tenth of the gap. Almost 9 in 10 is between women and men doing the same kind of content.</li>
+        <li><strong>Their own words &rarr; ~19%.</strong> How women title and describe their own videos barely moves the gap.</li>
+        <li><strong>The comments they get &rarr; &#8776; 0.</strong> Account for the tone and heat of the comments each channel receives, and the gap is no longer distinguishable from zero. Comment treatment accounts for approximately 90% of the remaining gap. Women get more positive and less profane comments; men get more high-arousal comments, and amplification rewards those signals.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHAT DOES NOT EXPLAIN IT ===================== -->
+<section class="band band-warm" id="notit">
+  <div class="wrap">
+    <span class="kicker reveal">What does not explain it</span>
+    <h2 class="section-h reveal">Eight explanations I tested and ruled out</h2>
+    <p class="section-lede reveal" style="margin-bottom:26px">The obvious answers were the first ones I checked. Open any one to see the test and the result.</p>
+    <div class="ruleouts reveal">
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Topic</div><div class="roq">Do women just pick lower-traffic topics?</div><div class="rov">No, within the same categories, women still get about 20% fewer views.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Comparing only within the same 40 content categories removes just ~11% of the gap. Nearly 9 in 10 of it is within-category.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Output</div><div class="roq">Do women post fewer videos?</div><div class="rov">Partly, but a 22% gap remains after holding it constant.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Video count is the single largest ordinary factor in the raw gap. Hold it and the other basics constant and about 22% fewer views still remains.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Their content</div><div class="roq">Is it how women title their own videos?</div><div class="rov">No, their own word choices move the gap by under 3%.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Scoring every title and description and holding them constant removes only a few percent of the gap.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Subscribers</div><div class="roq">Do audiences subscribe to women less?</div><div class="rov">No, there is no real subscriber gap. The shortfall is only in views.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Run the same models with subscribers as the outcome and the gap essentially disappears.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Engagement</div><div class="roq">Do audiences value women's content less?</div><div class="rov">No, women's channels get higher engagement, not lower.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">More likes and comments relative to audience size, on women's channels, not fewer.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Who comments</div><div class="roq">Is it just male commenters?</div><div class="rov">No, male and female commenters both soften on women's channels.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Measured separately, both groups address women's channels with warmer, lower-heat language. The pattern does not depend on who is commenting.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Self-promotion</div><div class="roq">Do women promote themselves less elsewhere?</div><div class="rov">No, women link out more, and it does not change the gap.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Women link to other platforms more often (about 20% vs 16%); accounting for it leaves the view gap intact.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Backlash</div><div class="roq">Is it backlash against women in male-typed fields?</div><div class="rov">No, the backlash test comes back null.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">The three-way interaction is not statistically significant (beta=0.026, p=.73), so the visibility penalty attaches to the affective signal itself, not specifically to women as a category.</div></details>
+    </div>
+    <p class="reveal" style="font-size:14px;color:var(--ink-faint);margin-top:18px;max-width:70ch">It also holds up under the usual robustness checks: outliers, missing data, comment length, alternative codings, and alternative ways of computing the statistics.</p>
+  </div>
+</section>
+
+<!-- ===================== MECHANISM (dark) ===================== -->
+<section class="band mech" id="mechanism">
+  <div class="wrap">
+    <span class="kicker reveal">The mechanism</span>
+    <h2 class="section-h reveal">Amplification rewards high-arousal signals</h2>
+    <p class="section-lede reveal" style="color:var(--night-ink)">Both human resharing and an inferred engagement-optimizing recommender system reward high-arousal signals. In the models, positive comment tone is associated with fewer views (about -0.43), while profanity is associated with more views (about +0.20). Because women's channels receive more positive and less profane comments, softer treatment becomes lower visibility.</p>
+    <div class="two reveal">
+      <div class="lane">
+        <h4>Women's channels</h4>
+        <ul><li>Warmer, more positive comments</li><li>About half as much profanity</li><li>Calmer, lower-heat engagement</li></ul>
+        <div class="signal">&rarr; weaker amplification, fewer views</div>
+      </div>
+      <div class="lane">
+        <h4>Men's channels</h4>
+        <ul><li>More contentious comments</li><li>More profanity</li><li>Hotter, higher-arousal engagement</li></ul>
+        <div class="signal">&rarr; stronger amplification, more views</div>
+      </div>
+    </div>
+    <div class="figrow reveal" style="margin-top:26px">
+      <figure class="figcard" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><img src="/assets/fig/mechanism_diagram.png" alt="Creator gender shapes the tone and heat of audience comments, which recommendation and resharing amplify into visibility." loading="lazy"><figcaption style="color:var(--night-ink)">How warmer treatment becomes fewer views: gendered comment patterns, amplified by recommendation and resharing.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GROUNDED IN THE LITERATURE ===================== -->
+<section class="band" id="grounded">
+  <div class="wrap">
+    <span class="kicker reveal">Grounded in the literature</span>
+    <h2 class="section-h reveal">What this builds on</h2>
+    <p class="section-lede reveal" style="margin-bottom:24px">The finding rests on three established literatures: how attention spreads online, how ranking systems amplify without any gendered intent, and how favorable-seeming treatment can still be biased.</p>
+    <div class="cites reveal">
+      <div class="cite-group">
+        <h4>Why intensity spreads and warmth does not</h4>
+        <ul>
+          <li>Berger &amp; Milkman (2012), <span>Journal of Marketing Research</span></li>
+          <li>Brady et al. (2017), <span>PNAS</span></li>
+          <li>Rathje et al. (2021), <span>PNAS</span></li>
+          <li>Milli et al. (2025), <span>PNAS Nexus</span></li>
+        </ul>
+      </div>
+      <div class="cite-group">
+        <h4>How ranking amplifies, without gendered intent</h4>
+        <ul>
+          <li>Huszar et al. (2022), <span>PNAS</span></li>
+          <li>Lambrecht &amp; Tucker (2019), <span>Management Science</span></li>
+          <li>Covington et al. (2016), <span>ACM RecSys</span></li>
+        </ul>
+      </div>
+      <div class="cite-group">
+        <h4>Softer treatment as a form of bias</h4>
+        <ul>
+          <li>Glick &amp; Fiske (2001), <span>American Psychologist</span></li>
+          <li>Bareket &amp; Fiske (2023), <span>Psychological Bulletin</span></li>
+          <li>Nguyen et al. (2024), <span>Entrepreneurship Theory &amp; Practice</span></li>
+        </ul>
+      </div>
+      <div class="cite-group">
+        <h4>The evaluation-gap tradition it revises</h4>
+        <ul>
+          <li>Kanze et al. (2018), <span>Academy of Management Journal</span></li>
+          <li>Brooks et al. (2014), <span>PNAS</span></li>
+          <li>Ewens &amp; Townsend (2020), <span>Journal of Financial Economics</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="reveal" style="font-size:13px;color:var(--ink-faint);margin-top:18px">Full references are in the manuscript.</p>
+  </div>
+</section>
+
+<!-- ===================== THE TALK ===================== -->
+<section class="band" id="talk">
+  <div class="wrap">
+    <span class="kicker reveal">The talk</span>
+    <h2 class="section-h reveal">Talk overview</h2>
+    <p class="section-lede reveal" style="margin-bottom:26px">A short version of the job market paper argument. Use the arrows, dots, or arrow keys.</p>
+
+    <div class="reveal" id="talk-interactive"></div>
+
+    <!-- static, readable fallback -->
+    <div id="talk-static" class="reveal lede-prose">
+      <p><strong>The setting.</strong> YouTube creators build businesses through audience attention. On platforms, audience reception and visibility are linked by recommendation systems rather than by a single evaluator who also allocates resources.</p>
+      <p><strong>The question.</strong> Gender-and-entrepreneurship research often explains women's disadvantage through unfavorable evaluation. I ask whether that account holds when platform amplification sits between evaluation and allocation.</p>
+      <p><strong>The evidence.</strong> I study a random sample of 9,232 U.S. YouTube creators, more than 6 million audience comments, creator information, YouTube Data API metrics, and text and image measures of content.</p>
+      <p><strong>The findings.</strong> Women's channels get about 33% fewer views, and about 22% fewer views after the usual controls. They receive more positive and less profane comments, higher engagement, and no statistically significant controlled subscriber gap.</p>
+      <p><strong>The mechanism.</strong> Positive comment tone is associated with fewer views, while profanity is associated with more views. Human resharing and an inferred engagement-optimizing recommender system convert softer treatment into lower visibility.</p>
+      <p><strong>The contribution.</strong> This is a boundary condition on favorable-evaluation accounts of entrepreneurial inequality: more favorable treatment can coexist with lower visibility.</p>
+    </div>
+    <p class="reveal" style="font-size:13px;color:var(--ink-faint);margin-top:16px">Adapted from my M&amp;O Research Camp talk.</p>
+  </div>
+</section>
+
+<!-- ===================== THE PAPER ===================== -->
+<section class="band band-warm" id="paper">
+  <div class="wrap">
+    <span class="kicker reveal">The paper</span>
+    <h2 class="section-h reveal">Read it in full</h2>
+
+    <div class="lede-prose reveal">
+      <p>The full manuscript is available on request. The headline findings: women's channels receive about 22% fewer views than comparable men's after controls, yet earn higher engagement and have no statistically significant controlled subscriber gap; topics, titles, transcripts, thumbnails, and other creator-controlled surfaces do not explain the gap; women receive more positive and less profane comments while men receive more high-arousal comments; and once audience comment treatment enters the model, the remaining gap is not distinguishable from zero. I call the mechanism a negative arousal bonus: human resharing and an inferred engagement-optimizing recommender system amplify high-arousal engagement into visibility more powerfully than positive reception. When algorithmic intermediaries stand between evaluation and allocation, positive reception can lose its protective force.</p>
+    </div>
+
+    <div class="paper-actions reveal" style="margin:8px 0 28px">
+      <a class="btn btn-solid" href="mailto:kaa82@cornell.edu?subject=Approval%20Without%20Amplification%20draft">Request the current draft</a>
+      <a class="btn btn-line" href="/research/youtube-gender-gap/#explain">Replay what explains the gap</a>
+    </div>
+
+    <div class="figrow reveal">
+      <figure class="figcard"><img src="/assets/fig/coefficient_progression.png" alt="The gender gap in views shrinks to statistical non-significance as audience comment tone and heat enter the model." loading="lazy"><figcaption>The gap shrinks to non-significance as the tone and heat of comments enter the model.</figcaption></figure>
+    </div>
+
+    <div class="reveal" style="margin-top:30px">
+      <h3 style="font-size:22px;margin-bottom:12px">Cite this paper</h3>
+      <div class="bib"><button class="btn btn-line btn-sm copy-btn" data-copy="#bibtext" style="border-color:rgba(255,255,255,.3);color:#fff">Copy</button><span id="bibtext">@unpublished{apker_approval_2026,
+  author = {Apker, Katie},
+  title  = {Approval Without Amplification: Gender and Entrepreneurial
+            Visibility on Algorithmically Mediated Platforms},
+  note   = {Working paper, Cornell University, ILR School},
+  year   = {2026}
+}</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span class="mark"><img src="/assets/img/crest.png" alt="Cornell University">Katie Apker</span>
+    <div class="dots"><i></i><i></i><i></i><i></i></div>
+    <span class="c">© <span data-year></span> Katie Apker · Cornell University, ILR School</span>
+  </div>
+</footer>
+
+<script src="/assets/js/jmp-data.js"></script>
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/explorer.js" defer></script>
+</body>
+</html>
