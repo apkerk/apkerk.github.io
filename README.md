@@ -38,6 +38,9 @@ DNS: Cloudflare account manages katieapker.com (Bluehost = registrar only). Apex
 - `assets/css/site.css` — the whole design system
 - `assets/js/` — `site.js` (global enhancement), `data.js` (content reference), `jmp-data.js` + `explorer.js` (JMP interactivity)
 - `assets/fig/`, `assets/img/`, `assets/cv.pdf`, `manuscripts/`
+- `teaching/` — teaching page (courses, SET ratings, teaching document links); in sitemap + nav
+- `docs/` — evergreen job-market document URLs (unlisted: robots-disallowed, noindex, not in sitemap; Katie hands these links out directly). Stable names: `apker-cv.pdf`, `apker-research-statement.pdf`, `apker-teaching-statement.pdf`, `apker-teaching-evidence.pdf`, `apker-jmp.pdf`, `apker-writing-sample-founder-identity.pdf`, plus `docs/index.html` landing page listing all six. **Sync rule:** `assets/cv.pdf` and `docs/apker-cv.pdf` must always be the same file — update both when swapping the CV.
+- `preview/` — unlisted scratch pages for Katie to compare design variants before shipping (noindex, not in sitemap); safe to delete once a variant is chosen
 - `robots.txt`, `sitemap.xml`, `llms.txt`
 
 ## Open items before going live
