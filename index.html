@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=7">
+<link rel="stylesheet" href="/assets/css/site.css?v=8">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -92,11 +92,14 @@
     <div class="spot reveal">
       <div>
         <h3>Approval Without Amplification</h3>
-        <p class="hook">On YouTube, women's channels receive more positive and less profane comments, but get fewer views. I show that human resharing and an inferred engagement-optimizing recommender system reward high-arousal signals. Women get approval, men get amplification.</p>
-        <div id="home-decomp"></div>
+        <p class="hook">Women get approval, men get amplification.</p>
+        <div class="prose">
+          <p>My job market paper asks why women's channels on YouTube receive fewer views than men's. I follow a random sample of 9,232 U.S. channels and more than six million audience comments to trace where the gap comes from.</p>
+          <p>The raw gap is large: women's channels receive about 33% fewer views, and about 22% fewer after the usual controls. Audiences treat women's channels well. Their comments are more positive and less profane, and their viewers are more engaged. But once you account for the positivity and profanity of the comments a channel receives, the view gap collapses to essentially zero.</p>
+          <p>The mechanism is the platform's amplification machinery. Human resharing and an engagement-optimizing recommender system reward high-arousal signals, so positive comment tone predicts fewer views while profanity predicts more. The warm reception women's channels earn is exactly the signal the system declines to amplify.</p>
+        </div>
         <div class="spot-cta">
           <a class="btn btn-solid" href="/research/youtube-gender-gap/">Read the deep-dive</a>
-          <a class="btn btn-line" href="/research/youtube-gender-gap/#talk">View the talk</a>
         </div>
       </div>
       <div class="statpair">
@@ -114,33 +117,9 @@
   <div class="wrap">
     <span class="kicker reveal">Explore by paper</span>
     <h2 class="section-h reveal">All research, by stage</h2>
-    <p class="section-lede reveal">Papers listed by stage. The descriptions below state each project's question and current finding in plain language.</p>
+    <p class="section-lede reveal">Papers listed by stage. The job market paper is featured above. The descriptions below state each project's question and current finding in plain language.</p>
 
     <div class="statusgroup reveal" style="margin-top:34px">
-      <div class="group-h">Job market paper</div>
-      <details class="paper" open>
-        <summary class="paper-head">
-          <div>
-            <div class="t">Approval Without Amplification</div>
-            <div class="a">Katie Apker · Gender and Visibility on Algorithmically Mediated Platforms</div>
-            <div class="meta"><span class="tag jmp">Job market paper · draft available on request</span></div>
-          </div>
-          <span class="expand-ico" aria-hidden="true">+</span>
-        </summary>
-        <div class="paper-body-in">
-          <div>
-            <p>On YouTube, women's channels receive more positive and less profane comments, but get fewer views. I show that human resharing and an inferred engagement-optimizing recommender system convert softer treatment into lower visibility.</p>
-            <div class="paper-actions">
-              <a class="btn btn-solid btn-sm" href="/research/youtube-gender-gap/">Open the deep-dive</a>
-              <a class="btn btn-line btn-sm" href="/research/youtube-gender-gap/#talk">View the talk</a>
-            </div>
-          </div>
-          <div class="figwrap"><img src="/assets/fig/coefficient_progression.png" alt="The gender gap in views shrinks to near zero as audience comment positivity and profanity enter the model." loading="lazy"></div>
-        </div>
-      </details>
-    </div>
-
-    <div class="statusgroup reveal">
       <div class="group-h">Under review</div>
       <details class="paper">
         <summary class="paper-head">
@@ -351,6 +330,5 @@
 
 <script src="/assets/js/jmp-data.js"></script>
 <script src="/assets/js/site.js" defer></script>
-<script src="/assets/js/home-decomp.js" defer></script>
 </body>
 </html>
