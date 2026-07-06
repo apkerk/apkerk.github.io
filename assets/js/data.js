@@ -57,8 +57,8 @@ window.SITE = {
       twoLine: "On YouTube, women's channels receive more positive and less profane comments, but get fewer views. I show that human resharing and an inferred engagement-optimizing recommender system convert softer treatment into lower visibility." },
 
     { id: "founder-identity", featured: "page", group: "Under review", statusClass: "review",
-      title: "Putting the “I” in Entrepreneurship",
-      sub: "Individualist Founder Identity and Opportunity Orientation among Digital Entrepreneurs",
+      title: "Putting the “I” in Entrepreneurial Identity",
+      sub: "Self-Enclosure in Digital Ventures",
       authors: "Katie Apker",
       status: "Under review",
       themes: ["gender-as-lens"],
