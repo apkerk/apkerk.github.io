@@ -14,7 +14,7 @@
   if (!steps.length) return;
   var raw = steps[0].residual;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var COLLAPSE_CAP = "The gap collapses to about zero once audience comment tone and heat enter the model.";
+  var COLLAPSE_CAP = "The gap collapses to about zero once audience comment positivity and profanity enter the model.";
 
   mount.innerHTML =
     '<span class="hd-kicker">How the view gap disappears</span>' +
