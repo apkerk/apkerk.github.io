@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="r"><rect width="64" height="64" rx="13"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="64" height="64" fill="#FCFBF6"/>
+    <rect x="0" y="57" width="16" height="7" fill="#E63100"/>
+    <rect x="16" y="57" width="16" height="7" fill="#E6007E"/>
+    <rect x="32" y="57" width="16" height="7" fill="#3A6248"/>
+    <rect x="48" y="57" width="16" height="7" fill="#E5A33A"/>
+    <text x="29" y="45" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="600" font-style="italic" fill="#1F2A44" text-anchor="middle">K</text>
+    <circle cx="47" cy="42" r="4.5" fill="#E63100"/>
+  </g>
+</svg>

@@ -22,14 +22,14 @@
     var stepsHtml = steps.map(function (s, i) {
       return '<button class="dstep" data-i="' + i + '" aria-pressed="' + (i === 0 ? "true" : "false") + '">' +
                '<span class="dk">' + s.key + '</span>' +
-               '<span class="dv">' + s.label + ' gap</span>' +
+               '<span class="dv">' + s.exLabel + ' explained</span>' +
              '</button>';
     }).join("");
 
     dHost.innerHTML =
       '<div class="decomp">' +
         '<div class="bar-track"><div class="bar-fill" id="dbar"><span class="pct" id="dpct"></span></div></div>' +
-        '<div class="bar-cap">How big the view gap still is</div>' +
+        '<div class="bar-cap">How much of the view gap is explained so far</div>' +
         '<div class="decomp-steps">' + stepsHtml + '</div>' +
         '<div class="decomp-controls">' +
           '<button class="btn btn-line btn-sm" id="dprev">&larr; Back</button>' +
@@ -48,10 +48,10 @@
     function render(i) {
       cur = i;
       var s = steps[i];
-      var w = Math.max((s.residual / rawResidual) * 100, 4);
+      var w = Math.max(s.ex, 13);
       bar.style.width = w + "%";
-      bar.style.background = s.punch ? "linear-gradient(90deg,var(--green),#5b9c79)" : "linear-gradient(90deg,var(--lava),#ff5a2b)";
-      pct.textContent = s.label;
+      bar.style.background = s.ex === 0 ? "linear-gradient(90deg,#C9C2B0,#D8D2C2)" : "linear-gradient(90deg,var(--green),#5b9c79)";
+      pct.textContent = s.exLabel;
       stepEls.forEach(function (b, j) { b.setAttribute("aria-pressed", j === i ? "true" : "false"); });
       read.innerHTML =
         '<div class="explains" style="color:' + (s.punch ? "var(--green)" : "var(--lava)") + '">' +
