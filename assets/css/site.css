@@ -283,6 +283,12 @@ details.paper[open] .expand-ico { transform: rotate(45deg); background: var(--in
 .decomp .bar-fill { position:absolute; inset: 0 auto 0 0; background: linear-gradient(90deg, var(--lava), #ff5a2b); transition: width .7s cubic-bezier(.22,.61,.36,1); display:flex; align-items:center; }
 .decomp .bar-fill .pct { color:#fff; font:600 20px/1 var(--font-mono); padding-left: 16px; white-space:nowrap; }
 .decomp .bar-cap { font-size:13px; color:var(--ink-faint); margin-top:8px; }
+.decomp .bar-track.stacked { display:flex; }
+.decomp .seg { height:100%; width:0; transition: width .7s cubic-bezier(.22,.61,.36,1); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.decomp .seg .seglab { font:600 16px/1 var(--font-mono); color:#fff; white-space:nowrap; }
+.decomp .seg1 { background:#1F2A44; }
+.decomp .seg2 { background:#A89F8C; }
+.decomp .seg3 { background:linear-gradient(90deg,var(--lava),#ff5a2b); }
 .decomp-steps { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap:8px; margin: 22px 0; }
 .dstep { text-align:left; background: var(--bg); border:1px solid var(--rule); border-radius:8px; padding:12px 14px; cursor:pointer; transition:.15s; }
 .dstep:hover { border-color: var(--lava); }
