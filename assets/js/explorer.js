@@ -19,17 +19,22 @@
     var steps = J.decomp;
     var rawResidual = steps[0].residual;
 
+    var incs = steps.map(function (s, i) { return i === 0 ? 0 : steps[i].ex - steps[i - 1].ex; });
     var stepsHtml = steps.map(function (s, i) {
       return '<button class="dstep" data-i="' + i + '" aria-pressed="' + (i === 0 ? "true" : "false") + '">' +
                '<span class="dk">' + s.key + '</span>' +
-               '<span class="dv">' + s.exLabel + ' explained</span>' +
+               '<span class="dv">' + (i === 0 ? "0% explained" : "+" + incs[i] + "%") + '</span>' +
              '</button>';
     }).join("");
 
     dHost.innerHTML =
       '<div class="decomp">' +
-        '<div class="bar-track"><div class="bar-fill" id="dbar"><span class="pct" id="dpct"></span></div></div>' +
-        '<div class="bar-cap">How much of the view gap is explained so far</div>' +
+        '<div class="bar-track stacked">' +
+          '<div class="seg seg1"><span class="seglab">+33%</span></div>' +
+          '<div class="seg seg2"><span class="seglab">+9%</span></div>' +
+          '<div class="seg seg3"><span class="seglab">+58%</span></div>' +
+        '</div>' +
+        '<div class="bar-cap" id="dcap">Share of the view gap explained, factor by factor</div>' +
         '<div class="decomp-steps">' + stepsHtml + '</div>' +
         '<div class="decomp-controls">' +
           '<button class="btn btn-line btn-sm" id="dprev">&larr; Back</button>' +
@@ -39,8 +44,9 @@
         '<div class="decomp-readout" id="dread"></div>' +
       '</div>';
 
-    var bar = document.getElementById("dbar");
-    var pct = document.getElementById("dpct");
+    var segs = Array.prototype.slice.call(dHost.querySelectorAll(".seg"));
+    segs.forEach(function (el, j) { el.querySelector(".seglab").textContent = "+" + incs[j + 1] + "%"; });
+    var cap = document.getElementById("dcap");
     var read = document.getElementById("dread");
     var stepEls = Array.prototype.slice.call(dHost.querySelectorAll(".dstep"));
     var cur = 0, playing = null;
@@ -48,10 +54,8 @@
     function render(i) {
       cur = i;
       var s = steps[i];
-      var w = Math.max(s.ex, 13);
-      bar.style.width = w + "%";
-      bar.style.background = s.ex === 0 ? "linear-gradient(90deg,#C9C2B0,#D8D2C2)" : "linear-gradient(90deg,var(--green),#5b9c79)";
-      pct.textContent = s.exLabel;
+      segs.forEach(function (el, j) { el.style.width = (j + 1 <= i ? incs[j + 1] : 0) + "%"; });
+      cap.textContent = i === 0 ? "0% of the view gap explained yet - click a factor or play it through" : s.exLabel + " of the view gap explained so far";
       stepEls.forEach(function (b, j) { b.setAttribute("aria-pressed", j === i ? "true" : "false"); });
       read.innerHTML =
         '<div class="explains" style="color:' + (s.punch ? "var(--green)" : "var(--lava)") + '">' +
