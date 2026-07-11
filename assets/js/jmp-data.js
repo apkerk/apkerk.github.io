@@ -40,14 +40,18 @@ window.JMP = {
       sub: "Women get more positive, less profane comments. Resharing and the algorithmic recommendation system reward psychological arousal and negativity, so warmer, softer treatment contributes to fewer views. About 90% of the remaining gap runs through this difference." },
   ],
 
-  /* ---- what does NOT explain it (the eight rule-outs, plain) ---- */
+  /* ---- what does NOT explain it (the ten rule-outs, plain) ---- */
   ruleouts: [
     { tag: "Topic", q: "Do women just pick lower-traffic topics?", v: "No, within the same categories, women still get about 20% fewer views.",
       detail: "Comparing only within the same 40 content categories removes just ~11% of the gap. Nearly 9 in 10 of it is within-category." },
     { tag: "Output", q: "Do women post fewer videos?", v: "Partly, output is the biggest ordinary factor, but a 22% gap remains after holding it constant.",
       detail: "Video count is the single largest controllable piece of the raw gap. Once it and the other channel basics are held constant, about 22% fewer views still remains." },
-    { tag: "Their content", q: "Is it how women title and frame their own videos?", v: "No, their own word choices move the gap by under 3%.",
+    { tag: "Titles & descriptions", q: "Is it how women title and frame their own videos?", v: "No, their own word choices move the gap by under 3%.",
       detail: "Scoring every title and description with the same language tools and holding them constant removes only a few percent of the gap." },
+    { tag: "Transcripts", q: "Is it what women actually say in their videos?", v: "No, spoken content runs in women's favor: holding it constant leaves the gap intact, even slightly larger.",
+      detail: "Transcript language, scored with the same tools as everything else, explains essentially none of the gap. Transcript availability is equal across genders (about 88% for both), so it is not a data artifact." },
+    { tag: "Thumbnails", q: "Is it how women package their videos?", v: "No, women's thumbnails are if anything an asset: more positive, warmer, less clickbait.",
+      detail: "Packaging is the largest single creator-controlled surface and still explains under about 9% of the remaining gap; in the integrated model it partly runs in women's favor." },
     { tag: "Subscribers", q: "Do audiences subscribe to women less?", v: "No, there is no real subscriber gap. The shortfall is only in views.",
       detail: "Run the same models with subscribers as the outcome and the gap essentially disappears. It is specific to views." },
     { tag: "Engagement", q: "Do audiences value women's content less?", v: "No, women's channels get higher engagement, not lower.",
