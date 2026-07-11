@@ -9,13 +9,13 @@ window.JMP = {
   sub: "Gender and visibility on algorithmically mediated platforms",
 
   plain:
-    "In a random sample of 9,232 U.S. YouTube creators and more than 6 million comments, women's channels get about 33% fewer views. About a third of the raw gap is explained by production differences. The remaining gap is not explained by topics, titles, transcripts, or thumbnails. Women's channels receive more positive and less profane comments, and those softer signals are less rewarded by human resharing and an inferred engagement-optimizing recommender system.",
+    "In a random sample of 9,232 U.S. YouTube creators and more than 6 million comments, women's channels get about 33% fewer views. About a third of the raw gap is explained by production differences. Topics, titles, transcripts, and thumbnails barely move the remaining gap: no single creator-controlled surface explains more than about 9%, and some run in women's favor. Women's channels receive more positive and less profane comments, and those softer signals are less rewarded by human resharing and an inferred engagement-optimizing recommender system.",
   plainSub:
     "Same finding, in one line: women get approval, men get amplification.",
 
   heroStats: [
     { n: "33%", d: "fewer views for women's channels at the start (about 22% after the usual controls)", kind: "gap" },
-    { n: "≈ 0", d: "the gap that remains once you account for the positivity and profanity of the comments each channel receives", kind: "resolved" },
+    { n: "≈ 90%", d: "of the remaining view gap is explained by the positivity and profanity of the comments each channel receives", kind: "resolved" },
   ],
 
   /* ---- the decomposition explorer: how much of the gap each thing explains ----
