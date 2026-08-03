@@ -54,6 +54,15 @@ DNS: Cloudflare account manages katieapker.com (Bluehost = registrar only). Apex
 
 "Gender Ideology, Separate Spheres" (Polhill, Raines, Apker) is under review at Organization Science. Title, authors, and status may show; NO abstract, figures, detail page, or draft until it is published.
 
+## Analytics (since 2026-08-03)
+
+Cloudflare Web Analytics beacon (token `6c766be4…`) sits before `</head>` on all
+8 pages — **keep it when creating new pages or editing heads**. Dashboard:
+Cloudflare → Web Analytics. Weekly Telegram digest + snapshot archive:
+see `../site-analytics/README.md`. Note: page visits are tracked; direct
+`/docs/` PDF opens are NOT (the beacon is JS-only and Katie declined the
+Cloudflare proxy switch that would count them server-side, 2026-08-03).
+
 ## Note on stack
 
 Built as plain static HTML/CSS/JS rather than Astro for a zero-toolchain, ships-today build that avoids node_modules in Google Drive. It ports to Astro later if maintainability via a build step becomes worth it; the content model in `data.js` is already structured for that.
