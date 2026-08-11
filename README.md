@@ -56,12 +56,14 @@ DNS: Cloudflare account manages katieapker.com (Bluehost = registrar only). Apex
 
 ## Analytics (since 2026-08-03)
 
-Cloudflare Web Analytics beacon (token `6c766be4…`) sits before `</head>` on all
-8 pages — **keep it when creating new pages or editing heads**. Dashboard:
-Cloudflare → Web Analytics. Weekly Telegram digest + snapshot archive:
-see `../site-analytics/README.md`. Note: page visits are tracked; direct
-`/docs/` PDF opens are NOT (the beacon is JS-only and Katie declined the
-Cloudflare proxy switch that would count them server-side, 2026-08-03).
+Three tags sit before `</head>` on all 8 pages — **keep all three when creating
+new pages or editing heads**: (1) Cloudflare Web Analytics beacon (backup,
+country-level), (2) Umami script from stats.katieapker.com (primary: cities,
+dwell, journeys), (3) `/assets/js/track.js` (fires `doc-click` and `outbound`
+events into Umami). Katie's dashboard: https://stats.katieapker.com. Daily
+Telegram digest + snapshot archive: see `../site-analytics/README.md`.
+Direct opens of `/docs/` PDF URLs shared outside the site are NOT tracked
+(JS-only; Katie declined the Cloudflare proxy alternative, 2026-08-03).
 
 ## Note on stack
 
