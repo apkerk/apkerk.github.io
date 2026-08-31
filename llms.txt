@@ -1,6 +1,6 @@
 # Katie Apker
 
-> PhD candidate in Organizational Behavior at Cornell University's ILR School. I study how digital platforms reshape who gets to build a business, do well at work, and be seen online, with gender as the analytical lens. I build large original datasets to make mostly invisible economies measurable.
+> PhD candidate in Organizational Behavior at Cornell University's ILR School. I study how digital platforms reshape who gets to build a business, do well at work, and be seen online, with gender as the analytical lens. I build large original datasets to make mostly invisible economies measurable. I am on the 2026-2027 academic job market.
 
 Affiliation: Cornell University, ILR School (Organizational Behavior)
 Contact: kaa82@cornell.edu
@@ -14,7 +14,7 @@ Site: https://katieapker.com/
 
 ## Papers
 
-- Approval Without Amplification: Gender and Visibility on Algorithmically Mediated Platforms (Katie Apker). Job market paper, in progress. On YouTube, women's channels receive warmer comments and fewer views; the recommendation algorithm rewards heated engagement and converts women's warmer reception into a visibility penalty. https://katieapker.com/research/youtube-gender-gap/
+- Approval Without Amplification: Gender and Entrepreneurial Visibility on Algorithmically Mediated Platforms (Katie Apker). Job market paper, in progress. On YouTube, negative and profane audience engagement predicts more views while positive tone predicts fewer, a negative arousal bonus; women's channels receive warmer, less profane comments, and that softer reception accounts for most of their controlled view gap. https://katieapker.com/research/youtube-gender-gap/
 - Putting the "I" in Entrepreneurial Identity: Self-Enclosure in Digital Ventures (Katie Apker). Under review. https://katieapker.com/research/founder-identity/
 - Gender Ideology, Separate Spheres, and the Decline of Women's Entrepreneurship (Polhill, Raines, & Apker). Under review at Organization Science. Details withheld until publication.
 - Mapping the Creator Economy: A Framework and Research Agenda for Management Scholarship (Cho, Apker, and colleagues). Editing for submission.
