@@ -49,12 +49,12 @@ window.SITE = {
   papers: [
     { id: "jmp", featured: "full", group: "Job market paper", statusClass: "jmp",
       title: "Approval Without Amplification",
-      sub: "Gender and Visibility on Algorithmically Mediated Platforms",
+      sub: "Gender and Visibility in Algorithmically Mediated Entrepreneurship",
       authors: "Katie Apker",
       status: "Job market paper · manuscript in progress",
       themes: ["ai-and-work", "gender-as-lens", "creator-economy"],
       href: "/research/youtube-gender-gap/",
-      twoLine: "On YouTube, women's channels receive more positive and less profane comments, but get fewer views. I show that human resharing and an inferred engagement-optimizing recommender system convert softer treatment into lower visibility." },
+      twoLine: "Negative and profane audience engagement on YouTube is linked to greater visibility, a negative arousal bonus. Women receive about 33 percent fewer views than men, largely accounted for by their channels attracting more positive and less profane comments, which are less rewarded by engagement-optimizing algorithms." },
 
     { id: "founder-identity", featured: "page", group: "Under review", statusClass: "review",
       title: "Putting the “I” in Entrepreneurial Identity",

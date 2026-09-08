@@ -14,7 +14,7 @@ Site: https://katieapker.com/
 
 ## Papers
 
-- Approval Without Amplification: Gender and Entrepreneurial Visibility on Algorithmically Mediated Platforms (Katie Apker). Job market paper, in progress. On YouTube, negative and profane audience engagement predicts more views while positive tone predicts fewer, a negative arousal bonus; women's channels receive warmer, less profane comments, and that softer reception accounts for most of their controlled view gap. https://katieapker.com/research/youtube-gender-gap/
+- Approval Without Amplification: Gender and Visibility in Algorithmically Mediated Entrepreneurship (Katie Apker). Job market paper, in progress. Negative and profane audience engagement is positively associated with entrepreneurial visibility on YouTube. Women receive about 33 percent fewer views than men, mainly accounted for by their receiving more positive and less profane comments, which generate less algorithmic amplification. https://katieapker.com/research/youtube-gender-gap/
 - Putting the "I" in Entrepreneurial Identity: Self-Enclosure in Digital Ventures (Katie Apker). Under review. https://katieapker.com/research/founder-identity/
 - Gender Ideology, Separate Spheres, and the Decline of Women's Entrepreneurship (Polhill, Raines, & Apker). Under review at Organization Science. Details withheld until publication.
 - Mapping the Creator Economy: A Framework and Research Agenda for Management Scholarship (Cho, Apker, and colleagues). Editing for submission.

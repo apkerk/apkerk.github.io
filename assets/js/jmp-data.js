@@ -6,10 +6,10 @@
 
 window.JMP = {
   title: "Approval Without Amplification",
-  sub: "Gender and visibility on algorithmically mediated platforms",
+  sub: "Gender and visibility in algorithmically mediated entrepreneurship",
 
   plain:
-    "In a random sample of 9,232 U.S. YouTube creators and more than 6 million comments, women's channels get about 33% fewer views. About a third of the raw gap is explained by production differences. Topics, titles, transcripts, and thumbnails barely move the remaining gap: no single creator-controlled surface explains more than about 9%, and some run in women's favor. Women's channels receive more positive and less profane comments, and those softer signals are less rewarded by human resharing and an inferred engagement-optimizing recommender system.",
+    "Channels with more negative and profane audience comments receive higher visibility, reflecting a negative arousal bonus. Women creator-entrepreneurs receive about 33 percent fewer views than men. Although roughly one-third of the gap is related to women producing less content, the majority of the visibility gap is explained by women's comment sections being more positive and less profane, resulting in less engagement amplification. The association between comment negativity and visibility is similar for both genders, indicating that the gap does not arise from differences in how engagement is amplified but from women's channels receiving softer reception.",
   plainSub:
     "Same finding, in one line: women get approval, men get amplification.",
 
@@ -78,10 +78,10 @@ window.JMP = {
   talk: [
     { sn: "The setting", h: "YouTube creators build businesses through visibility", body: "On platforms, audience reception and visibility are linked by recommendation systems rather than by a single evaluator who also allocates resources." },
     { sn: "The question", h: "Does favorable evaluation still protect entrepreneurs?", body: "Gender-and-entrepreneurship research often explains women's disadvantage through unfavorable evaluation. I ask whether that account holds when platform amplification sits between evaluation and allocation." },
-    { sn: "The evidence", h: "9,232 creators, 6 million+ comments", body: "I study a random sample of U.S. YouTube creators, audience comments, creator information, YouTube Data API metrics, and text and image measures of content." },
+    { sn: "The evidence", h: "9,232 creators, 5.7 million+ comments", body: "I study a random sample of U.S. YouTube creators, audience comments, creator information, YouTube Data API metrics, and text and image measures of content." },
     { sn: "The mechanism", h: "Visibility depends on audience signals", body: "Both human resharing and an inferred engagement-optimizing recommender system amplify high-arousal signals more strongly than positive reception." },
     { sn: "Two possibilities", h: "Audience treatment could help or hurt", html: '<ul><li><strong>Hostility:</strong> if audiences attack women, high-arousal negativity could produce more visibility.</li><li><strong>Softer treatment:</strong> if audiences respond more positively to women, lower-arousal signals could produce less visibility.</li></ul><p>The data support the second pattern.</p>' },
-    { sn: "The setting", h: "Creator data plus audience comments", body: "The analysis combines creator information, YouTube Data API metrics, more than 6 million audience comments, and text and image measures of content." },
+    { sn: "The setting", h: "Creator data plus audience comments", body: "The analysis combines creator information, YouTube Data API metrics, more than 5.7 million audience comments, and text and image measures of content." },
     { sn: "Finding 1", h: "Women get about 33% fewer views", body: "Despite equivalent subscribers and higher engagement rates. The shortfall is specific to views, the thing that pays." },
     { sn: "Finding 2", h: "The usual explanations do not hold", body: "The gap survives controls for output, quality, content category, and how women title their own videos. It is not what women are making." },
     { sn: "Finding 3", h: "Women receive softer audience treatment", html: '<ul><li><strong>53.5 vs 43.1</strong> comment tone for women\'s versus men\'s channels</li><li><strong>0.19% vs 0.43%</strong> profanity in comments on women\'s versus men\'s channels</li></ul><p>Women also have higher engagement and no statistically significant controlled subscriber gap.</p>' },
@@ -93,8 +93,8 @@ window.JMP = {
   bibtex:
 `@unpublished{apker_approval_2026,
   author = {Apker, Katie},
-  title  = {Approval Without Amplification: Gender and Entrepreneurial
-            Visibility on Algorithmically Mediated Platforms},
+  title  = {Approval Without Amplification: Gender and Visibility
+            in Algorithmically Mediated Entrepreneurship},
   note   = {Working paper, Cornell University, ILR School},
   year   = {2026}
 }`,
