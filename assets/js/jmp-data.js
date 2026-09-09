@@ -15,7 +15,7 @@ window.JMP = {
 
   heroStats: [
     { n: "33%", d: "fewer views for women's channels at the start (about 22% after the usual controls)", kind: "gap" },
-    { n: "87%", d: "of the 22% lower visibility women receive compared to men after accounting for channel and content factors is explained by the more positive and less profane comments on their channels", kind: "resolved" },
+    { n: "87%", d: "of the controlled gender gap in views is mediated by comment tone and profanity", kind: "resolved" },
   ],
 
   /* ---- the decomposition explorer: how much of the gap each thing explains ----
