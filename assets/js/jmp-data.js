@@ -15,7 +15,7 @@ window.JMP = {
 
   heroStats: [
     { n: "33%", d: "fewer views for women's channels at the start (about 22% after the usual controls)", kind: "gap" },
-    { n: "≈ 90%", d: "of the remaining view gap is explained by the positivity and profanity of the comments each channel receives", kind: "resolved" },
+    { n: "87%", d: "of the 22% lower visibility women receive compared to men after accounting for channel and content factors is explained by the more positive and less profane comments on their channels", kind: "resolved" },
   ],
 
   /* ---- the decomposition explorer: how much of the gap each thing explains ----
@@ -37,7 +37,7 @@ window.JMP = {
     { key: "The comments they get", factor: "how negative and how profane the comments are",
       residual: 2, label: "≈ 0", ex: 100, exLabel: "≈ 100%", sig: false, punch: true,
       explains: "The comments explain almost all of what is left. Account for how negative and how profane each channel's comments are, and the gap is no longer distinguishable from zero.",
-      sub: "Women get more positive, less profane comments. Resharing and the algorithmic recommendation system reward psychological arousal and negativity, so warmer, softer treatment contributes to fewer views. About 90% of the remaining gap runs through this difference." },
+      sub: "Women get more positive, less profane comments. Resharing and the algorithmic recommendation system reward psychological arousal and negativity, so warmer, softer treatment contributes to fewer views. About 87% of the remaining gap runs through this difference." },
   ],
 
   /* ---- what does NOT explain it (the ten rule-outs, plain) ---- */
@@ -85,7 +85,7 @@ window.JMP = {
     { sn: "Finding 1", h: "Women get about 33% fewer views", body: "Despite equivalent subscribers and higher engagement rates. The shortfall is specific to views, the thing that pays." },
     { sn: "Finding 2", h: "The usual explanations do not hold", body: "The gap survives controls for output, quality, content category, and how women title their own videos. It is not what women are making." },
     { sn: "Finding 3", h: "Women receive softer audience treatment", html: '<ul><li><strong>53.5 vs 43.1</strong> comment tone for women\'s versus men\'s channels</li><li><strong>0.19% vs 0.43%</strong> profanity in comments on women\'s versus men\'s channels</li></ul><p>Women also have higher engagement and no statistically significant controlled subscriber gap.</p>' },
-    { sn: "Finding 4", h: "Comment treatment explains the remaining gap", body: "Put the positivity and profanity of the comments into the model and the gender gap is no longer distinguishable from zero. Comment treatment accounts for approximately 90% of the remaining gap." },
+    { sn: "Finding 4", h: "Comment treatment explains the remaining gap", body: "Put the positivity and profanity of the comments into the model and the gender gap is no longer distinguishable from zero. Comment treatment accounts for about 87% of the remaining gap." },
     { sn: "The mechanism", h: "A negative arousal bonus", body: "Positive comment tone is associated with fewer views, while profanity is associated with more views. Human resharing and an inferred engagement-optimizing recommender system convert softer treatment into lower visibility." },
     { sn: "Why it matters", h: "A boundary condition on favorable evaluation", body: "More favorable treatment can coexist with lower visibility. When algorithmic intermediaries stand between evaluation and allocation, positive reception can lose its protective force." },
   ],
