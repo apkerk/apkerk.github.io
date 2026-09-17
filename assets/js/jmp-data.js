@@ -15,7 +15,7 @@ window.JMP = {
 
   heroStats: [
     { n: "33%", d: "fewer views for women's channels at the start (about 22% after the usual controls)", kind: "gap" },
-    { n: "87%", d: "of the controlled gender gap in views is mediated by comment tone and profanity", kind: "resolved" },
+    { n: "50%+", d: "of the raw gender gap in views is related to comment negativity and profanity", kind: "resolved" },
   ],
 
   /* ---- the decomposition explorer: how much of the gap each thing explains ----
@@ -27,17 +27,17 @@ window.JMP = {
       explains: "Women's channels get about 33% fewer views than comparable men's.",
       sub: "This is the whole gap, before accounting for anything." },
     { key: "Production", factor: "channel age and number of videos",
-      residual: 22, label: "22%", ex: 33, exLabel: "33%", sig: true,
-      explains: "About a third of the gap is production: women's channels are younger and post fewer videos.",
+      residual: 22, label: "22%", ex: 40, exLabel: "40%", sig: true,
+      explains: "About 40% of the gap is production: women's channels are younger and post fewer videos.",
       sub: "Compare channels of similar age and output, and about 22% fewer views is still left." },
     { key: "Topic & their own content", factor: "content categories plus how women title and frame their own videos",
-      residual: 19, label: "19%", ex: 42, exLabel: "42%", sig: true,
-      explains: "Topic and their own content add only a little beyond production: about nine more points of the gap.",
-      sub: "Women and men in the same categories show almost the same gap, and women's own titles and framing barely move it. It is not what women are making or how they present it." },
+      residual: 20, label: "20%", ex: 47, exLabel: "47%", sig: false,
+      explains: "Topic and their own content add only a few points, and the decomposition cannot distinguish their contribution from zero.",
+      sub: "Women and men in the same categories show almost the same gap, and women's own titles and framing barely move it. In the Oaxaca-Blinder decomposition the share attributable to content categories is not statistically significant. It is not what women are making or how they present it." },
     { key: "The comments they get", factor: "how negative and how profane the comments are",
       residual: 2, label: "≈ 0", ex: 100, exLabel: "≈ 100%", sig: false, punch: true,
       explains: "The comments explain almost all of what is left. Account for how negative and how profane each channel's comments are, and the gap is no longer distinguishable from zero.",
-      sub: "Women get more positive, less profane comments. Resharing and the algorithmic recommendation system reward psychological arousal and negativity, so warmer, softer treatment contributes to fewer views. About 87% of the gap left after controls runs through this difference." },
+      sub: "Women get more positive, less profane comments. Resharing and the algorithmic recommendation system reward psychological arousal and negativity, so warmer, softer treatment contributes to fewer views. More than 50% of the raw gender gap runs through this difference, and about 87% of the gap left after controls." },
   ],
 
   /* ---- what does NOT explain it (the ten rule-outs, plain) ---- */
@@ -85,7 +85,7 @@ window.JMP = {
     { sn: "Finding 1", h: "Women get about 33% fewer views", body: "Despite equivalent subscribers and higher engagement rates. The shortfall is specific to views, the thing that pays." },
     { sn: "Finding 2", h: "The usual explanations do not hold", body: "The gap survives controls for output, quality, content category, and how women title their own videos. It is not what women are making." },
     { sn: "Finding 3", h: "Women receive softer audience treatment", html: '<ul><li><strong>53.5 vs 43.1</strong> comment tone for women\'s versus men\'s channels</li><li><strong>0.19% vs 0.43%</strong> profanity in comments on women\'s versus men\'s channels</li></ul><p>Women also have higher engagement and no statistically significant controlled subscriber gap.</p>' },
-    { sn: "Finding 4", h: "Comment treatment explains the remaining gap", body: "Put the positivity and profanity of the comments into the model and the gender gap is no longer distinguishable from zero. Comment treatment accounts for about 87% of the gap left after controls." },
+    { sn: "Finding 4", h: "Comment treatment explains the remaining gap", body: "Put the positivity and profanity of the comments into the model and the gender gap is no longer distinguishable from zero. Comment treatment accounts for more than 50% of the raw gap, and about 87% of the gap left after controls." },
     { sn: "The mechanism", h: "A negative arousal bonus", body: "Positive comment tone is associated with fewer views, while profanity is associated with more views. Human resharing and an inferred engagement-optimizing recommender system convert softer treatment into lower visibility." },
     { sn: "Why it matters", h: "A boundary condition on favorable evaluation", body: "More favorable treatment can coexist with lower visibility. When algorithmic intermediaries stand between evaluation and allocation, positive reception can lose its protective force." },
   ],
