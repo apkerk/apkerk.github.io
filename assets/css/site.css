@@ -162,7 +162,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .dstep:focus-visib
 .bigstat .d { font-size: 17px; color: var(--ink-soft); margin-top: 6px; }
 .bigstat .rowstat { display: flex; align-items: baseline; gap: 10px; }
 .bigstat .rowstat + .rowstat { margin-top: 16px; }
-.bigstat .rn { font: 600 clamp(22px,2.6vw,30px)/1 var(--font-mono); color: var(--lava); white-space: nowrap; }
+.bigstat .rn { font: 600 clamp(26px,3vw,36px)/1 var(--font-display); letter-spacing: -.01em; color: var(--lava); white-space: nowrap; }
 .bigstat .rl { font-size: 17px; color: var(--ink-soft); }
 
 /* generic prose blocks (spotlight, teaching, docs) */
@@ -321,7 +321,12 @@ details.paper[open] .expand-ico { transform: rotate(45deg); background: var(--in
 /* what does NOT explain it */
 .ruleouts { display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap:12px; }
 @media (min-width: 1000px) { .ruleouts { grid-template-columns: repeat(5, 1fr); } }
-.ro { text-align:left; background: var(--card); border:1px solid var(--rule); border-radius:10px; padding:18px; cursor:pointer; transition:.15s; }
+.ro { text-align:left; background: var(--card); border:1px solid var(--rule); border-radius:10px; padding:0; cursor:pointer; transition:.15s; display:flex; flex-direction:column; }
+.ro > summary { padding:18px; cursor:pointer; }
+/* grid stretches every card to the row height; let the summary fill it so the
+   whole card is clickable, not just the text block (dead zones up to 64%) */
+.ro:not([open]) > summary { flex:1 0 auto; }
+.ro > summary + div { padding:0 18px 18px; }
 .ro:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: var(--shadow); }
 .ro .rotag { font:600 11px/1 var(--font-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--green); }
 .ro .roq { font:600 16px/1.3 var(--font-body); color:var(--ink); margin-top:8px; }

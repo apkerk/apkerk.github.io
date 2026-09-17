@@ -23,7 +23,7 @@
     var stepsHtml = steps.map(function (s, i) {
       return '<button class="dstep" data-i="' + i + '" aria-pressed="' + (i === 0 ? "true" : "false") + '">' +
                '<span class="dk">' + s.key + '</span>' +
-               '<span class="dv">' + (i === 0 ? "0% explained" : "+" + incs[i] + "%") + '</span>' +
+               '<span class="dv">' + (i === 0 ? "0% explained" : "+" + incs[i] + "% of the raw gap") + '</span>' +
              '</button>';
     }).join("");
 
@@ -55,7 +55,7 @@
       cur = i;
       var s = steps[i];
       segs.forEach(function (el, j) { el.style.width = (j + 1 <= i ? incs[j + 1] : 0) + "%"; });
-      cap.textContent = i === 0 ? "0% of the view gap explained yet - click a factor or play it through" : s.exLabel + " of the view gap explained so far";
+      cap.textContent = i === 0 ? "0% of the view gap explained yet - click a factor or play it through" : s.exLabel + " of the raw gap explained so far";
       stepEls.forEach(function (b, j) { b.setAttribute("aria-pressed", j === i ? "true" : "false"); });
       read.innerHTML =
         '<div class="explains" style="color:' + (s.punch ? "var(--green)" : "var(--lava)") + '">' +
