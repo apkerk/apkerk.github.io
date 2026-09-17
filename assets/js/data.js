@@ -91,10 +91,10 @@ window.SITE = {
       href: null,
       twoLine: "Whether corporate social responsibility ratings push all boards, or just some boards, toward adding more women." },
 
-    { id: "gov-mandates", featured: "card", group: "Editing for submission", statusClass: "editing",
-      title: "Government Mandates, Manager Compliance, and a Partisan Filter in Enforcement",
+    { id: "gov-mandates", featured: "card", group: "Under review", statusClass: "review",
+      title: "Government Mandates, Manager Compliance, and a Partisan Filter in Enforcement Expectation",
       authors: "Rissing, Apker, & Carver",
-      status: "Editing for submission",
+      status: "Under review",
       themes: [],
       href: null,
       twoLine: "How managers' political views shape their expectations about enforcement and their compliance with government mandates." },
