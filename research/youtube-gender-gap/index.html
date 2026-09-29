@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=19">
+<link rel="stylesheet" href="/assets/css/site.css?v=20">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <script type="application/ld+json">
@@ -61,16 +61,16 @@
 
     <div class="plainband reveal in">
       <div class="lbl">The finding in 30 seconds</div>
-      <p>Channels with more negative and profane audience comments receive higher visibility, reflecting a negative arousal bonus. Women creator-entrepreneurs receive about 33 percent fewer views than men. Although roughly one-third of the gap is related to women producing less content, the majority of the visibility gap is explained by women's comment sections being more positive and less profane, resulting in less engagement amplification. The association between comment negativity and visibility is similar for both genders, indicating that the gap does not arise from differences in how engagement is amplified but from women's channels receiving softer reception.</p>
+      <p>Women’s YouTube channels receive about 20 percent fewer views than men’s channels of the same age, video count, and content category. More positive comment tone correlates with fewer views, while more profanity correlates with more views, both across creators and within their own videos. Women’s channels receive more positive comments and about 55 percent less profanity, a pattern consistent with benevolent sexism. A Gelbach decomposition of the 20 percent gap at the same channel age, video count, and content category shows that comment tone accounts for 88.0 percent and profanity for 6.7 percent of the visibility gap, together 94.7 percent. The association between comment tone and views is the same for men’s and women’s videos within creators.</p>
     </div>
 
-    <div class="statpair reveal" style="grid-template-columns:repeat(3,1fr);margin-top:24px">
-      <div class="bigstat"><div class="n"><span data-count="33" data-suffix="%">33%</span></div><div class="d">fewer views for women's channels</div></div>
-      <div class="bigstat resolved"><div class="n">50%+</div><div class="d">of the raw gender gap in views is related to comment negativity and profanity</div></div>
+    <div class="statpair statpair-3 reveal" style="margin-top:24px">
+      <div class="bigstat"><div class="n"><span data-count="20" data-suffix="%">20%</span></div><div class="d">fewer views for women's channels, comparing channels of the same age, video count, and content category</div></div>
+      <div class="bigstat resolved"><div class="n">94.7%</div><div class="d">of that 20% gap accounted for by comment tone and profanity (Gelbach decomposition)</div></div>
       <div class="bigstat">
-        <div class="rowstat"><span class="rn">9,232</span><span class="rl">channels</span></div>
+        <div class="rowstat"><span class="rn">9,096</span><span class="rl">channels</span></div>
         <div class="rowstat"><span class="rn">450,000+</span><span class="rl">videos</span></div>
-        <div class="rowstat"><span class="rn">5.7M+</span><span class="rl">audience comments analyzed</span></div>
+        <div class="rowstat"><span class="rn">5.7M+</span><span class="rl">audience comments</span></div>
       </div>
     </div>
   </div>
@@ -91,19 +91,29 @@
 <!-- ===================== WHAT EXPLAINS THE GAP ===================== -->
 <section class="band" id="explain">
   <div class="wrap">
-    <h2 class="section-h reveal hc-lava">How Much Does Each Factor Explain?</h2>
-    <p class="section-lede reveal" style="margin-bottom:30px">The gap starts at 33%. Add one explanation at a time and watch how much of it is explained. Almost all of it turns out to be the negativity and profanity of the comments.</p>
+    <h2 class="section-h reveal hc-lava">Decomposition of the Visibility Gap</h2>
+    <p class="section-lede reveal" style="margin-bottom:30px">Women’s channels receive about 20 percent fewer views than men’s when comparing channels of the same age, video count, and content category (9,096 channels). The Gelbach decomposition shows that 94.7 percent of this gap is associated with comment reception, mainly comment tone (88.0 percent) and profanity (6.7 percent), while creator content’s share of the 20 percent gap is minus 7.3 percent, meaning holding content equal widens the gap; other factors have no distinguishable shares.</p>
 
     <div class="reveal" id="decomp-interactive"></div>
 
-    <!-- static, always-readable fallback (hidden when the interactive version loads) -->
+    <!-- static, always-readable fallback (hidden when the bar chart loads) -->
     <div id="decomp-static" class="reveal">
-      <ol style="max-width:70ch;line-height:1.6">
-        <li><strong>The starting gap: 0% explained.</strong> Women's channels get about a third fewer views, before accounting for anything.</li>
-        <li><strong>Production &rarr; about 40% explained.</strong> Comparing channels of similar age, output, and quality explains about 40% of the gap. Video output is the biggest single piece. A real 22% gap remains.</li>
-        <li><strong>Topic &amp; their own content &rarr; about 47% explained, and not statistically significant.</strong> Content categories plus how women title and frame their own videos add only a few points beyond production, and the decomposition cannot distinguish their contribution from zero. It is not what women are making or how they present it.</li>
-        <li><strong>The comments they get &rarr; &#8776; 100% explained.</strong> Account for how negative and how profane each channel's comments are, and the gap is no longer distinguishable from zero. Comment treatment accounts for more than 50% of the raw gap, and about 87% of the gap left after controls. Women get more positive and less profane comments; men get more high-arousal comments, and amplification rewards those signals.</li>
+      <p style="font-size:14px;color:var(--ink-soft);margin-bottom:12px">Share of the 20% gap (same channel age, video count, and content category), percent. n.s. = not statistically distinguishable from zero.</p>
+      <ol class="decomp-static-list">
+        <li><span class="fam">Creator side</span><span class="cap">Bars show the share accounted for by creator-controlled content tone and profanity, which widens the gap, with channel trailer and HD video quality not distinguishable from zero.</span>
+          <ul><li>Creator content: &minus;7.3%</li><li>Channel trailer: +1.5% (n.s.)</li><li>HD video: +0.7% (n.s.)</li></ul></li>
+        <li><span class="fam">Amount of reception</span><span class="cap">Bars show the share accounted for by comment volume, which is not statistically distinguishable from zero.</span>
+          <ul><li>Comment volume: &minus;0.2% (n.s.)</li></ul></li>
+        <li><span class="fam">Comment reception</span><span class="cap">Bars show the share of the 20 percent gap accounted for by audience comment tone and profanity combined, accounting for 94.7 percent of the difference.</span>
+          <ul><li>Comment tone: +88.0%</li><li>Comment profanity: +6.7%</li></ul></li>
+        <li><span class="fam">Not accounted for</span><span class="cap">Bars show the remaining share of the gap not accounted for by included factors; the full model’s gap is not statistically distinguishable from zero.</span>
+          <ul><li>Left over: +10.5% (n.s.)</li></ul></li>
       </ol>
+    </div>
+
+    <div class="decomp-notes reveal">
+      <p>Each share represents the portion of the 20 percent gap accounted for by a factor when all factors are held equal together. Shares are an accounting of the change in the creator-gender coefficient between the model with creator gender, channel age, video count, and content category and the model that adds every block at once. Shares do not indicate causal effects. Negative shares mean holding that factor equal widens the gap. The order of factors does not affect shares.</p>
+      <p>In the raw 34 percent gap without controls, channel age and video count account for 56.4 percent of the gap, while content category’s share is minus 12.5 percent, meaning holding category equal widens the gap.</p>
     </div>
   </div>
 </section>
@@ -111,43 +121,42 @@
 <!-- ===================== WHAT DOES NOT EXPLAIN IT ===================== -->
 <section class="band band-warm" id="notit">
   <div class="wrap">
-    <h2 class="section-h reveal hc-green">Ten Explanations I Tested and Ruled Out</h2>
-    <p class="section-lede reveal" style="margin-bottom:26px">The obvious answers were the first ones I checked. Open any one to see the test and the result.</p>
+    <h2 class="section-h reveal hc-green">Alternative Explanations for View Gaps</h2>
     <div class="ruleouts reveal">
-      <details class="ro"><summary style="list-style:none"><div class="rotag">Topic</div><div class="roq">Do women just pick lower-traffic topics?</div><div class="rov">No, within the same categories, women still get about 20% fewer views.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Comparing only within the same 40 content categories removes just ~11% of the gap. Nearly 9 in 10 of it is within-category.</div></details>
-      <details class="ro"><summary style="list-style:none"><div class="rotag">Output</div><div class="roq">Do women post fewer videos?</div><div class="rov">Partly, but a 22% gap remains after holding it constant.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Video count is the single largest ordinary factor in the raw gap. Hold it and the other basics constant and about 22% fewer views still remains.</div></details>
-      <details class="ro"><summary style="list-style:none"><div class="rotag">Titles &amp; descriptions</div><div class="roq">Is it how women title their own videos?</div><div class="rov">No, their own word choices move the gap by under 3%.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Scoring every title and description and holding them constant removes only a few percent of the gap.</div></details>
-      <details class="ro"><summary style="list-style:none"><div class="rotag">Transcripts</div><div class="roq">Is it what women actually say in their videos?</div><div class="rov">No, spoken content runs in women's favor: holding it constant leaves the gap intact, even slightly larger.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Transcript language, scored with the same tools as everything else, explains essentially none of the gap. Transcript availability is equal across genders (about 88% for both), so it is not a data artifact.</div></details>
-      <details class="ro"><summary style="list-style:none"><div class="rotag">Thumbnails</div><div class="roq">Is it how women package their videos?</div><div class="rov">No, women's thumbnails are if anything an asset: more positive, warmer, less clickbait.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Packaging is the largest single creator-controlled surface and still explains under about 9% of the remaining gap; in the integrated model it partly runs in women's favor.</div></details>
-      <details class="ro"><summary style="list-style:none"><div class="rotag">Subscribers</div><div class="roq">Do audiences subscribe to women less?</div><div class="rov">No, there is no real subscriber gap. The shortfall is only in views.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Run the same models with subscribers as the outcome and the gap essentially disappears.</div></details>
-      <details class="ro"><summary style="list-style:none"><div class="rotag">Engagement</div><div class="roq">Do audiences value women's content less?</div><div class="rov">No, women's channels get higher engagement, not lower.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">More likes and comments relative to audience size, on women's channels, not fewer.</div></details>
-      <details class="ro"><summary style="list-style:none"><div class="rotag">Who comments</div><div class="roq">Is it just male commenters?</div><div class="rov">No, male and female commenters both soften on women's channels.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Measured separately, both groups address women's channels with warmer, lower-heat language. The pattern does not depend on who is commenting.</div></details>
-      <details class="ro"><summary style="list-style:none"><div class="rotag">Self-promotion</div><div class="roq">Do women promote themselves less elsewhere?</div><div class="rov">No, women link out more, and it does not change the gap.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Women link to other platforms more often (about 20% vs 16%); accounting for it leaves the view gap intact.</div></details>
-      <details class="ro"><summary style="list-style:none"><div class="rotag">Backlash</div><div class="roq">Is it backlash against women in male-typed fields?</div><div class="rov">No, the backlash test comes back null.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">The three-way interaction is not statistically significant (beta=0.03, p=.73), so the visibility penalty attaches to the affective signal itself, not specifically to women as a category.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Topic</div><div class="roq">Do women just pick lower-traffic topics?</div><div class="rov">No. In a Gelbach decomposition of the 19 percent gap, content category's share is minus 22.9 percent, widening the gap.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Comparing channels within the same 40 content categories the gap is about 20 percent, versus about 19 percent without category. Women’s categories average fewer views, but the gap remains significant within finer subtopics. Women’s channels still receive more positive and less profane comments within subtopics.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Output</div><div class="roq">Do women post fewer videos?</div><div class="rov">Partly. In a Gelbach decomposition of the raw 34 percent gap, channel age and video count account for 56.4 percent.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Women post fewer videos on average (834 versus 1,495), but the difference is not significant at the .05 level; the difference in logged videos per year of channel age is significant (p &lt; .0001). At the same age, video count, and category, women’s channels still receive about 20 percent fewer views.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Titles and descriptions</div><div class="roq">Is it how women title and describe their videos?</div><div class="rov">No. Creator content accounts for minus 7.3 percent of the 20 percent gap in a Gelbach decomposition, widening it.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Women’s titles and descriptions are more positive, but this does not close the gap.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Transcripts</div><div class="roq">Is it what women say in their videos?</div><div class="rov">No. Including transcripts with titles and descriptions accounts for minus 9.7 percent of the raw 34 percent gap and minus 18.2 percent of the gap at the same channel age and video count in a Gelbach decomposition, widening the gap.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Women’s spoken content is more positive. Transcript missingness is not significantly different by gender.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Thumbnails</div><div class="roq">Is it how women package their videos?</div><div class="rov">No. None of the content elements accounts for the gap in models including all creator content and comment reception.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Women’s thumbnails show more positive facial expressions, warmer colors, and less clickbait.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Subscribers</div><div class="roq">Do audiences subscribe to women less?</div><div class="rov">No. Controlling for channel age and video count reduces the difference to 0.6 percent, not statistically distinguishable from zero.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Without controls, women’s channels have about 10 percent fewer subscribers.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Engagement</div><div class="roq">Do audiences engage less with women’s channels?</div><div class="rov">No. At the same channel age and video count, engagement per view is 24.7 percent higher and engagement per subscriber is 14.2 percent higher on women’s channels, both significant at the .05 level.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Women’s channels also receive more comments.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Who comments</div><div class="roq">Is it just male commenters?</div><div class="rov">No. Male-coded and female-coded commenters write 10.0 and 9.8 tone points more positively, respectively, and use less profanity on women’s channels, both significant at the .05 level.</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Holding the share of female-coded commenters equal leaves a significant gap; the gap becomes not distinguishable from zero only when comment tone and profanity are included.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Self-promotion</div><div class="roq">Do women promote themselves less on other platforms?</div><div class="rov">No. Women’s channels link out more often (20.7 percent versus 16.4 percent, significant at the .05 level).</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">Holding linking equal leaves the gap unchanged, and linking’s association with views does not differ by gender.</div></details>
+      <details class="ro"><summary style="list-style:none"><div class="rotag">Backlash</div><div class="roq">Are women penalized differently in female-typed categories?</div><div class="rov">No. The three-way interaction of gender, comment tone, and female-typed category is -0.04 and not statistically distinguishable from zero (p = .61).</div></summary><div style="font-size:14px;color:var(--ink-soft);margin-top:12px">The link between positive tone and fewer views is steeper in female-typed categories for both genders.</div></details>
     </div>
-    <p class="reveal" style="font-size:14px;color:var(--ink-faint);margin-top:18px;max-width:70ch">It also holds up under the usual robustness checks: outliers, missing data, comment length, alternative codings, and alternative ways of computing the statistics.</p>
+    <p class="reveal" style="font-size:14px;color:var(--ink-faint);margin-top:18px;max-width:70ch">The 20 percent visibility gap and its association with comment tone and profanity hold under robustness checks including content-category clustered standard errors and wild cluster bootstrap, trimming extreme views, restricting to channels active at least twelve months, varying minimum comment floors from 20 to 500 per channel, weighting by comment count, holding like rate equal, and quantile regressions at the 25th, 50th, and 75th percentiles of views.</p>
   </div>
 </section>
 
 <!-- ===================== MECHANISM (dark) ===================== -->
 <section class="band mech" id="mechanism">
   <div class="wrap">
-    <h2 class="section-h reveal hc-pink">Amplification Rewards High-Arousal Signals</h2>
-    <p class="section-lede reveal" style="color:var(--night-ink)">Both human resharing and an inferred engagement-optimizing recommender system reward high-arousal signals. In the models, a standard deviation of positive comment tone is associated with about 0.43 fewer logged views, while profanity is associated with more views. Because women's channels receive more positive and less profane comments, softer treatment becomes lower visibility.</p>
+    <h2 class="section-h reveal hc-pink">Positive Comments Associate with Fewer Views</h2>
+    <p class="section-lede reveal" style="color:var(--night-ink)">Women’s channels receive more positive comments and less profanity, with commenters of both genders writing about 10 tone points more positively on women’s channels. At the same channel age, video count, comment volume, and content category, a one standard deviation increase in positive comment tone associates with about 35 percent fewer views, while a similar increase in profanity associates with about 5 percent more views. Within individual creators’ own videos, more positive comment tone is also associated with fewer views, and that association is the same on women’s and men’s videos. These associations form a negative arousal bonus. The suggested explanation, consistent with the data and prior research, is that recommendation systems and resharing audiences amplify visibility based on these engagement signals.</p>
     <div class="two reveal">
       <div class="lane">
-        <h4>Women's channels</h4>
-        <ul><li>Warmer, more positive comments</li><li>About half as much profanity</li><li>Calmer, lower-heat engagement</li></ul>
-        <div class="signal">&rarr; weaker amplification, fewer views</div>
+        <h4>Women’s channels</h4>
+        <ul><li>More positive comments (tone 62.8)</li><li>Profanity 0.19 percent of comment words</li><li>More comments and higher engagement</li></ul>
+        <div class="signal">This reception is associated with fewer views</div>
       </div>
       <div class="lane">
-        <h4>Men's channels</h4>
-        <ul><li>More contentious comments</li><li>More profanity</li><li>Hotter, higher-arousal engagement</li></ul>
-        <div class="signal">&rarr; stronger amplification, more views</div>
+        <h4>Men’s channels</h4>
+        <ul><li>Less positive comments (tone 52.7)</li><li>Profanity 0.43 percent of comment words</li><li>Fewer comments and lower engagement</li></ul>
+        <div class="signal">This reception is associated with more views</div>
       </div>
     </div>
     <div class="figrow reveal" style="margin-top:26px">
-      <figure class="figcard" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)"><img src="/assets/fig/mechanism_diagram.png" alt="Creator gender shapes the positivity and profanity of audience comments, which recommendation and resharing amplify into visibility." loading="lazy"><figcaption style="color:var(--night-ink)">How warmer treatment becomes fewer views: gendered comment patterns, amplified by recommendation and resharing.</figcaption></figure>
+      <figure class="figcard"><img src="/assets/fig/process_model_v1.png" alt="Diagram showing the suggested path from creator gender through the tone and profanity of audience comments, spread by recommendation systems and resharing audiences, to channel visibility." width="4152" height="1272" loading="lazy" style="width:100%;height:auto"><figcaption>Diagram showing the suggested path from creator gender through the tone and profanity of audience comments, spread by recommendation systems and resharing audiences, to channel visibility.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -157,8 +166,9 @@
   <div class="wrap">
     <h2 class="section-h reveal hc-lava">Talk Overview</h2>
     <div class="lede-prose reveal" style="margin-bottom:6px">
-      <p>Entrepreneurial success is often seen as depending on positive stakeholder evaluations, but on digital platforms like YouTube, visibility is allocated based on engagement intensity rather than favorability. This paper asks how audience evaluation relates to entrepreneurial visibility and whether these patterns differ by gender. Using a random sample of over 9,200 U.S. creator-entrepreneurs, I analyze millions of audience comments and channel metrics. I find that negative and profane engagement is associated with greater visibility, while women receive softer, more positive reception that generates less amplification, explaining much of the gender gap in visibility.</p>
+      <p>This study asks how audience evaluation relates to entrepreneurial visibility on YouTube and whether these dynamics differ by gender. The analysis uses the 9,096 channels with comment data among creators drawn at random from the Infludata frame of U.S. individual creators with at least 2,000 subscribers. Creator gender was hand-coded, and the dataset includes over 5.7 million audience comments. I find that women’s channels receive about 20 percent fewer views than men’s when controlling for channel age, video count, and content category. More positive comment tone correlates with fewer views, and more profanity correlates with more views, both across and within creators’ videos. Women’s channels receive more positive comments and substantially less profanity, consistent with benevolent sexism. A Gelbach decomposition attributes 88.0 percent of the 20 percent gap to comment tone and 6.7 percent to profanity, together accounting for 94.7 percent, with women’s own content positivity widening the gap rather than reducing it.</p>
     </div>
+    <!-- M&O Research Camp deck (May 2026 numbers) hidden in the 2026-09-28 refresh; images kept in /assets/talk-camp/.
     <div style="margin-top:30px" class="reveal">
       <h3 style="font-size:24px;margin-bottom:6px">As presented: the research camp slides</h3>
       <p style="font-size:15px;color:var(--ink-soft);margin-bottom:16px">The actual deck from my Cornell M&amp;O Research Camp talk (May 2026). Click a slide or use the buttons to advance.</p>
@@ -197,6 +207,7 @@
         <img src="/assets/talk-camp/slide-32.jpg" alt="Research camp slide 32 of 32" width="1920" height="1080" loading="lazy">
       </div>
     </div>
+    -->
 
   </div>
 </section>
@@ -245,16 +256,16 @@
     <h2 class="section-h reveal hc-pink">Read It in Full</h2>
 
     <div class="lede-prose reveal" style="max-width:none">
-      <p>The full manuscript is available on request. The headline findings: women's channels receive about 22% fewer views than comparable men's after controls, yet earn higher engagement and have no statistically significant controlled subscriber gap; topics, titles, transcripts, thumbnails, and other creator-controlled surfaces barely move the gap, with no single surface explaining more than about 9%; women receive more positive and less profane comments while men receive more high-arousal comments; and once audience comment treatment enters the model, the remaining gap is not distinguishable from zero. I call the mechanism a negative arousal bonus: human resharing and an inferred engagement-optimizing recommender system amplify high-arousal engagement into visibility more powerfully than positive reception. When algorithmic intermediaries stand between evaluation and allocation, positive reception can lose its protective force.</p>
+      <p>Women’s channels receive about 20 percent fewer views than men’s when comparing channels of the same age, video count, and content category. In a Gelbach decomposition of the 20 percent gap, comment tone and profanity together account for 94.7 percent. Women’s channels receive more positive and less profane comments from commenters of both genders, and engagement per view is about 25 percent higher on women’s channels. Subscriber counts are not distinguishable from men’s when controlling for channel age and video count. At the same channel age, video count, comment volume, and content category, a one standard deviation increase in positive comment tone associates with about 35 percent fewer views, while increased profanity associates with about 5 percent more views. These patterns align with prior findings that recommendation systems and audiences favor negative, high-arousal reactions. Women’s own content is more positive than men’s and does not account for the visibility gap. The manuscript is available on request.</p>
     </div>
 
     <div class="paper-actions reveal" style="margin:8px 0 28px">
       <a class="btn btn-solid" href="mailto:kaa82@cornell.edu?subject=Approval%20Without%20Amplification%20draft">Request the current draft</a>
-      <a class="btn btn-line" href="/research/youtube-gender-gap/#explain">Replay what explains the gap</a>
+      <a class="btn btn-line" href="/research/youtube-gender-gap/#explain">Back to the decomposition chart</a>
     </div>
 
     <div class="figrow reveal">
-      <figure class="figcard"><img src="/assets/fig/coefficient_progression.png" alt="The gender gap in views shrinks to statistical non-significance as audience comment positivity and profanity enter the model." loading="lazy"><figcaption>The gap shrinks to non-significance as the positivity and profanity of comments enter the model.</figcaption></figure>
+      <figure class="figcard"><img src="/assets/fig/coefficient_progression_v5.png" alt="Plot of the creator-gender coefficient across six nested models tracks the coefficient with creator gender alone; plus channel age and video count; plus creator content; plus comment volume; plus comment profanity; and plus comment tone, shown with and without content-category indicators. The gap is not statistically distinguishable from zero once comment tone enters." width="2736" height="1285" loading="lazy" style="width:100%;height:auto"><figcaption>Plot of the creator-gender coefficient across six nested models tracks the coefficient with creator gender alone; plus channel age and video count; plus creator content; plus comment volume; plus comment profanity; and plus comment tone, shown with and without content-category indicators. The gap is not statistically distinguishable from zero once comment tone enters.</figcaption></figure>
     </div>
 
     <div class="reveal" style="margin-top:30px">
@@ -278,8 +289,8 @@
   </div>
 </footer>
 
-<script src="/assets/js/jmp-data.js?v=5"></script>
+<script src="/assets/js/jmp-data.js?v=6"></script>
 <script src="/assets/js/site.js" defer></script>
-<script src="/assets/js/explorer.js?v=3" defer></script>
+<script src="/assets/js/explorer.js?v=4" defer></script>
 </body>
 </html>

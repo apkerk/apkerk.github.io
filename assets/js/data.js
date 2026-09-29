@@ -9,9 +9,9 @@
    - Name BOTH amplification channels (recommendation algorithm AND resharing),
      algorithm foregrounded as the larger force on YouTube.
 
-   DATA FRESHNESS: numbers below come from the canonical analysis dated
-   2026-06-10. Katie re-ran with new data as of 2026-06-17 — these are to be
-   refreshed against that run. Update here once; every page re-renders.
+   DATA FRESHNESS: JMP numbers refreshed 2026-09-28 (LIWC-coded comment tone,
+   analytic N 9,096). Pre-refresh copy:
+   _archive/pre-2026-09-28-refresh/assets/js/data.js
    ========================================================================== */
 
 window.SITE = {
@@ -54,7 +54,7 @@ window.SITE = {
       status: "Job market paper · manuscript in progress",
       themes: ["ai-and-work", "gender-as-lens", "creator-economy"],
       href: "/research/youtube-gender-gap/",
-      twoLine: "Negative and profane audience engagement on YouTube is linked to greater visibility, a negative arousal bonus. Women receive about 33 percent fewer views than men, largely accounted for by their channels attracting more positive and less profane comments, which are less rewarded by engagement-optimizing algorithms." },
+      twoLine: "Women’s YouTube channels receive about 20 percent fewer views than men’s channels of the same age, video count, and content category. More positive comment tone is associated with fewer views and more profanity with more views. Women’s channels receive more positive and less profane comments, jointly accounting for the majority of the 20 percent gap." },
 
     { id: "founder-identity", featured: "page", group: "Under review", statusClass: "review",
       title: "Putting the “I” in Entrepreneurial Identity",

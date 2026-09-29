@@ -1,10 +1,14 @@
 /* ==========================================================================
    explorer.js — JMP deep-dive interactivity (loaded only on the JMP page).
    Enhances static, already-readable content:
-     #decomp-static  -> interactive gap-decomposition explorer
-     #talk-static    -> click-through slide viewer
-   With JS off, the static versions remain fully readable. Rule-outs use
+     #decomp-static  -> decomposition bar chart (share of the 20% gap
+                        accounted for by each block, grouped by family)
+     #campdeck       -> click-through slide viewer (only if the section is
+                        present in the page)
+   With JS off, the static list remains fully readable. Rule-outs use
    native <details> and need no JS at all.
+   Pre-refresh version (ladder explorer + talk viewer):
+   _archive/pre-2026-09-28-refresh/assets/js/explorer.js
    ========================================================================== */
 (function () {
   "use strict";
@@ -12,153 +16,69 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var J = window.JMP;
 
-  /* ---------------- decomposition explorer ---------------- */
+  /* ---------------- decomposition bars ---------------- */
   var dHost = document.getElementById("decomp-interactive");
   var dStatic = document.getElementById("decomp-static");
-  if (dHost) {
-    var steps = J.decomp;
-    var rawResidual = steps[0].residual;
+  var D = J.decomp;
+  if (dHost && D && Array.isArray(D.families)) {
+    var span = D.max - D.min;
+    var pos = function (v) { return ((v - D.min) / span) * 100; };
+    var zero = pos(0);
+    var fmt = function (v) {
+      var s = Math.abs(v).toFixed(1) + "%";
+      return (v < 0 ? "−" : "+") + s;
+    };
+    var esc = function (s) {
+      return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    };
 
-    var incs = steps.map(function (s, i) { return i === 0 ? 0 : steps[i].ex - steps[i - 1].ex; });
-    var stepsHtml = steps.map(function (s, i) {
-      return '<button class="dstep" data-i="' + i + '" aria-pressed="' + (i === 0 ? "true" : "false") + '">' +
-               '<span class="dk">' + s.key + '</span>' +
-               '<span class="dv">' + (i === 0 ? "0% explained" : "+" + incs[i] + "% of the raw gap") + '</span>' +
-             '</button>';
+    var grid = D.ticks.map(function (t) {
+      return '<i class="db-grid' + (t === 0 ? " db-zero" : "") + '" style="left:' + pos(t) + '%"></i>';
     }).join("");
 
-    dHost.innerHTML =
-      '<div class="decomp">' +
-        '<div class="bar-track stacked">' +
-          '<div class="seg seg1"><span class="seglab">+33%</span></div>' +
-          '<div class="seg seg2"><span class="seglab">+9%</span></div>' +
-          '<div class="seg seg3"><span class="seglab">+58%</span></div>' +
-        '</div>' +
-        '<div class="bar-cap" id="dcap">Share of the view gap explained, factor by factor</div>' +
-        '<div class="decomp-steps">' + stepsHtml + '</div>' +
-        '<div class="decomp-controls">' +
-          '<button class="btn btn-line btn-sm" id="dprev">&larr; Back</button>' +
-          '<button class="btn btn-ink btn-sm" id="dplay">Play it through</button>' +
-          '<button class="btn btn-line btn-sm" id="dnext">Next &rarr;</button>' +
-        '</div>' +
-        '<div class="decomp-readout" id="dread"></div>' +
-      '</div>';
-
-    var segs = Array.prototype.slice.call(dHost.querySelectorAll(".seg"));
-    segs.forEach(function (el, j) { el.querySelector(".seglab").textContent = "+" + incs[j + 1] + "%"; });
-    var cap = document.getElementById("dcap");
-    var read = document.getElementById("dread");
-    var stepEls = Array.prototype.slice.call(dHost.querySelectorAll(".dstep"));
-    var cur = 0, playing = null;
-
-    function render(i) {
-      cur = i;
-      var s = steps[i];
-      segs.forEach(function (el, j) { el.style.width = (j + 1 <= i ? incs[j + 1] : 0) + "%"; });
-      cap.textContent = i === 0 ? "0% of the view gap explained yet - click a factor or play it through" : s.exLabel + " of the raw gap explained so far";
-      stepEls.forEach(function (b, j) { b.setAttribute("aria-pressed", j === i ? "true" : "false"); });
-      read.innerHTML =
-        '<div class="explains" style="color:' + (s.punch ? "var(--green)" : "var(--lava)") + '">' +
-          (i === 0 ? "Starting point" : "After accounting for " + s.factor) + '</div>' +
-        '<div class="big">' + s.explains + '</div>' +
-        '<div style="font-size:15px;color:var(--ink-soft)">' + s.sub + '</div>';
-    }
-    function go(i) {
-      if (i < 0 || i >= steps.length) return;
-      stopPlay(); render(i);
-    }
-    function stopPlay() { if (playing) { clearInterval(playing); playing = null; document.getElementById("dplay").textContent = "Play it through"; } }
-
-    stepEls.forEach(function (b) { b.addEventListener("click", function () { go(+b.getAttribute("data-i")); }); });
-    document.getElementById("dprev").addEventListener("click", function () { go(cur - 1); });
-    document.getElementById("dnext").addEventListener("click", function () { go(cur + 1); });
-    document.getElementById("dplay").addEventListener("click", function () {
-      if (playing) { stopPlay(); return; }
-      if (cur >= steps.length - 1) cur = -1;
-      document.getElementById("dplay").textContent = "Pause";
-      playing = setInterval(function () {
-        if (cur >= steps.length - 1) { stopPlay(); return; }
-        render(cur + 1);
-      }, reduce ? 400 : 1400);
+    var html = '<div class="dbars">';
+    D.families.forEach(function (fam) {
+      html += '<div class="db-fam">' +
+                '<div class="db-famh">' + esc(fam.name) + '</div>' +
+                '<p class="db-famcap">' + esc(fam.caption) + '</p>';
+      fam.items.forEach(function (it) {
+        /* anchor every bar at zero so it grows outward in the right direction */
+        var anchor = it.share < 0 ? "right:" + (100 - zero) + "%" : "left:" + zero + "%";
+        var width = Math.abs(pos(it.share) - zero);
+        var cls = it.sig ? "db-bar sig" : "db-bar ns";
+        html += '<div class="db-row">' +
+                  '<div class="db-lab">' + esc(it.label) + '</div>' +
+                  '<div class="db-track" aria-hidden="true">' + grid +
+                    '<span class="' + cls + '" data-w="' + width + '" style="' + anchor + ';width:' + (reduce ? width : 0) + '%"></span>' +
+                  '</div>' +
+                  '<div class="db-val">' + fmt(it.share) + (it.sig ? "" : ' <span class="db-ns">n.s.</span>') + '</div>' +
+                '</div>';
+      });
+      html += '</div>';
     });
+    var ticks = D.ticks.map(function (t) {
+      return '<span style="left:' + pos(t) + '%">' + (t < 0 ? "−" + Math.abs(t) : t) + '</span>';
+    }).join("");
+    html += '<div class="db-row db-axisrow" aria-hidden="true"><div class="db-lab"></div><div class="db-ticks">' + ticks + '</div><div class="db-val"></div></div>' +
+            '<div class="db-axis">' + esc(D.axis) + '</div>' +
+            '<div class="db-key"><span><i class="k sig"></i>Significant at the .05 level</span><span><i class="k ns"></i>n.s. = not statistically distinguishable from zero</span></div>' +
+          '</div>';
 
-    render(0);
-    if (dStatic) { dStatic.setAttribute("hidden", ""); }
+    dHost.innerHTML = html;
+    if (dStatic) dStatic.setAttribute("hidden", "");
 
-    /* autoplay the decomposition once, the first time it scrolls into view,
-       so a visitor sees the gap collapse without clicking. Manual controls
-       still work. Skipped under prefers-reduced-motion. */
-    if (!reduce && "IntersectionObserver" in window) {
-      var autoPlayed = false;
-      var pio = new IntersectionObserver(function (entries) {
+    var bars = Array.prototype.slice.call(dHost.querySelectorAll(".db-bar"));
+    var grow = function () { bars.forEach(function (b) { b.style.width = b.getAttribute("data-w") + "%"; }); };
+    if (reduce || !("IntersectionObserver" in window)) {
+      grow();
+    } else {
+      var bio = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
-          if (e.isIntersecting && !autoPlayed) {
-            autoPlayed = true;
-            pio.unobserve(e.target);
-            if (!playing) { document.getElementById("dplay").click(); }
-          }
+          if (e.isIntersecting) { grow(); bio.disconnect(); }
         });
-      }, { threshold: 0.4 });
-      pio.observe(dHost);
+      }, { threshold: 0.25 });
+      bio.observe(dHost);
     }
-  }
-
-  /* ---------------- talk slide viewer ---------------- */
-  var tHost = document.getElementById("talk-interactive");
-  var tStatic = document.getElementById("talk-static");
-  if (tHost && J.talk) {
-    var slides = J.talk;
-    var slidesHtml = slides.map(function (s, i) {
-      var inner = s.html ? s.html : "<p>" + s.body + "</p>";
-      return '<div class="slide' + (i === 0 ? " active" : "") + '" data-s="' + i + '" role="group" aria-label="Slide ' + (i + 1) + '">' +
-               '<div class="sn">' + s.sn + '</div>' +
-               '<h3>' + s.h + '</h3>' + inner +
-             '</div>';
-    }).join("");
-    var dotsHtml = slides.map(function (s, i) {
-      return '<button class="' + (i === 0 ? "on" : "") + '" data-d="' + i + '" aria-label="Go to slide ' + (i + 1) + '"></button>';
-    }).join("");
-
-    tHost.innerHTML =
-      '<div class="talk">' +
-        '<div class="slide-stage" id="stage">' + slidesHtml + '</div>' +
-        '<div class="slide-controls">' +
-          '<button class="btn btn-line btn-sm" id="sprev" style="border-color:rgba(255,255,255,.3);color:#fff">&larr;</button>' +
-          '<div class="slide-dots" id="sdots">' + dotsHtml + '</div>' +
-          '<span class="slide-count" id="scount">1 / ' + slides.length + '</span>' +
-          '<button class="btn btn-line btn-sm" id="snext" style="border-color:rgba(255,255,255,.3);color:#fff">&rarr;</button>' +
-        '</div>' +
-      '</div>';
-
-    var slideEls = Array.prototype.slice.call(tHost.querySelectorAll(".slide"));
-    var dotEls = Array.prototype.slice.call(tHost.querySelectorAll("#sdots button"));
-    var scount = document.getElementById("scount");
-    var si = 0;
-    function show(i) {
-      si = (i + slides.length) % slides.length;
-      slideEls.forEach(function (el, j) { el.classList.toggle("active", j === si); });
-      dotEls.forEach(function (el, j) { el.classList.toggle("on", j === si); });
-      scount.textContent = (si + 1) + " / " + slides.length;
-    }
-    document.getElementById("sprev").addEventListener("click", function () { show(si - 1); });
-    document.getElementById("snext").addEventListener("click", function () { show(si + 1); });
-    dotEls.forEach(function (b) { b.addEventListener("click", function () { show(+b.getAttribute("data-d")); }); });
-    tHost.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowRight") show(si + 1);
-      if (e.key === "ArrowLeft") show(si - 1);
-    });
-    tHost.setAttribute("tabindex", "0");
-    // swipe
-    var x0 = null;
-    document.getElementById("stage").addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
-    document.getElementById("stage").addEventListener("touchend", function (e) {
-      if (x0 === null) return;
-      var dx = e.changedTouches[0].clientX - x0;
-      if (Math.abs(dx) > 40) show(si + (dx < 0 ? 1 : -1));
-      x0 = null;
-    });
-
-    if (tStatic) tStatic.setAttribute("hidden", "");
   }
 
   /* ---------------- research camp slide click-through ---------------- */
@@ -176,18 +96,17 @@
       cd.parentNode.insertBefore(controls, cd.nextSibling);
       var ci = 0;
       var ccount = document.getElementById("ccount");
-      function cshow(i) {
+      var cshow = function (i) {
         ci = Math.min(Math.max(i, 0), cImgs.length - 1);
         cImgs.forEach(function (im, j) {
           if (j === ci) { im.classList.add("on"); im.removeAttribute("loading"); }
           else { im.classList.remove("on"); }
         });
         ccount.textContent = "Slide " + (ci + 1) + " of " + cImgs.length;
-      }
+      };
       document.getElementById("cprev").addEventListener("click", function () { cshow(ci - 1); });
       document.getElementById("cnext").addEventListener("click", function () { cshow(ci + 1); });
       cImgs.forEach(function (im) { im.addEventListener("click", function () { cshow(ci + 1); }); });
-      // swipe
       var cx0 = null;
       cd.addEventListener("touchstart", function (e) { cx0 = e.touches[0].clientX; }, { passive: true });
       cd.addEventListener("touchend", function (e) {
