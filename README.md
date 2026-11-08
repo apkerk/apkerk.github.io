@@ -20,7 +20,7 @@ To ship updates:
 
 ```
 STAGE=$(mktemp -d) && git clone --depth 1 https://github.com/apkerk/apkerk.github.io "$STAGE" \
-  && rsync -a --delete --exclude .git --exclude CNAME ./ "$STAGE/" \
+  && rsync -a --delete --exclude .git --exclude CNAME --exclude _archive --exclude .DS_Store --exclude preview ./ "$STAGE/" \
   && cd "$STAGE" && touch .nojekyll && git add -A \
   && git commit -m "Deploy from canonical site/" && git push
 ```

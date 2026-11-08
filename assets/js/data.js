@@ -54,7 +54,7 @@ window.SITE = {
       status: "Job market paper · manuscript in progress",
       themes: ["ai-and-work", "gender-as-lens", "creator-economy"],
       href: "/research/youtube-gender-gap/",
-      twoLine: "Women’s YouTube channels receive about 20 percent fewer views than men’s channels of the same age, video count, and content category. More positive comment tone is associated with fewer views and more profanity with more views. Women’s channels receive more positive and less profane comments, jointly accounting for the majority of the 20 percent gap." },
+      twoLine: "Women’s YouTube channels receive about 20 percent fewer views than men’s channels of the same age, video count, and content category. More positive comment tone is associated with fewer views and more divided comment sections with more views. Women’s channels receive more positive, less divided comments, which account for most of the gap." },
 
     { id: "founder-identity", featured: "page", group: "Under review", statusClass: "review",
       title: "Putting the “I” in Entrepreneurial Identity",
