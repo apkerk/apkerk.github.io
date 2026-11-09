@@ -67,7 +67,7 @@ window.SITE = {
 
     { id: "separate-spheres", featured: "title-only", group: "Under review", statusClass: "review",
       title: "Gender Ideology, Separate Spheres, and the Decline of Women's Entrepreneurship",
-      authors: "Polhill, P., Raines, G., & Apker, K.",
+      authors: "with Polhill, P., and Raines, G.",
       status: "Revise & resubmit, Organization Science",
       themes: ["gender-as-lens"],
       href: null,
