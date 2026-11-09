@@ -52,7 +52,7 @@ DNS: Cloudflare account manages katieapker.com (Bluehost = registrar only). Apex
 
 ## Embargo (hard)
 
-"Gender Ideology, Separate Spheres" (Polhill, Raines, Apker) is under review at Organization Science. Title, authors, and status may show; NO abstract, figures, detail page, or draft until it is published.
+"Gender Ideology, Separate Spheres" (Polhill, Raines, Apker) is a revise-and-resubmit at Organization Science (R&R received Nov 2026; site updated 2026-11-09). Title, authors, and status may show; NO abstract, figures, detail page, or draft until it is published.
 
 ## Analytics (since 2026-08-03)
 
