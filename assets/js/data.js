@@ -56,11 +56,11 @@ window.SITE = {
       href: "/research/youtube-gender-gap/",
       twoLine: "Women’s YouTube channels receive about 20 percent fewer views than men’s channels of the same age, video count, and content category. More positive comment tone is associated with fewer views and more divided comment sections with more views. Women’s channels receive more positive, less divided comments, which account for most of the gap." },
 
-    { id: "founder-identity", featured: "page", group: "Under review", statusClass: "review",
+    { id: "founder-identity", featured: "page", group: "Editing for submission", statusClass: "editing",
       title: "Putting the “I” in Entrepreneurial Identity",
       sub: "Self-Enclosure in Digital Ventures",
       authors: "Katie Apker",
-      status: "Under review",
+      status: "Editing for resubmission",
       themes: ["gender-as-lens"],
       href: "/research/founder-identity/",
       twoLine: "How digital entrepreneurs' individualist or collective founder identity shapes the opportunities they pursue online, and how that identity is gendered." },
